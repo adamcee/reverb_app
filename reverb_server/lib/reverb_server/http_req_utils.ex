@@ -18,8 +18,7 @@ defmodule ReverbApp.HTTPRequestUtils do
   returns a tuple with :ok, and a tuple with the accepts type and undecoded response body.
   On error returns an error tuple.
   """
-  def do_make_request(_url, opts \\ [])
-  def do_make_request(url, opts) do
+  def do_make_request(url, opts \\ []) do
     # get http request opts from map and assign defaults if needed
     method = Keyword.get(opts, :method, :get)
     params = Keyword.get(opts, :params, %{})
@@ -44,13 +43,16 @@ defmodule ReverbApp.HTTPRequestUtils do
         :delete -> {&HTTPotion.delete/2, [headers: headers, body: body_str, timeout: 45_000]}
       end
 
+    # Logger.info("Making call to #{url} with params #{inspect params}")
     # execute http request function and return {opts, response_body}, or error
     case method_fn.(url, opts) do
-      %HTTPotion.Response{body: response_body, status_code: code} when 200 <= code and code <= 299 ->
+      %HTTPotion.Response{body: response_body, status_code: code, headers: headers} when 200 <= code and code <= 299 ->
+        # Logger.info("Response headers: #{inspect headers}")
         {:ok, {accept, response_body}}
       e ->
         Logger.error("Failed call to #{url}")
         Logger.error("Called with #{inspect opts}")
+        Logger.error("Response headers: #{inspect headers}")
         Logger.error("Failure: #{inspect e}")
         {:error, :failure}
     end

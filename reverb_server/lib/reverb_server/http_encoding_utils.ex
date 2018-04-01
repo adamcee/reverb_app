@@ -8,7 +8,7 @@ defmodule ReverbApp.HTTPEncodingUtils do
   # the unencoded http response body string
   # return: encoded http response body string
   def encode_body(opts) do
-    content_type = Keyword.get(opts, :content_type)
+    content_type = Keyword.get(opts, :content_type, "application/json")
     body = Keyword.get(opts, :body, %{})
     case content_type do
       "application/json" -> Poison.encode!(body)

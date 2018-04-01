@@ -3,8 +3,12 @@ defmodule ReverbApp.ReverbApi do
   alias ReverbApp.HTTPEncodingUtils, as: EU
   require Logger
 
-  def get_all_listings do
-    get("/listings/all")
+  def get_listings_all(params \\ %{}) do
+    get("/listings/all", [{:params, params}])
+  end
+
+  def get_categories_flat do
+    get("/categories/flat")
   end
 
   defp get(endpoint, opts \\ []) do
