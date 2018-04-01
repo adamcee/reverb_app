@@ -2,7 +2,6 @@ defmodule ReverbApp.HttpReqUtils do
   require Logger
 
   # think this is for if no opts get passed somehow
-  def do_make_request(_url, opts \\ [])
 
   @doc """
   param: url - string, url to request from.
@@ -11,6 +10,7 @@ defmodule ReverbApp.HttpReqUtils do
      ex: [{:method, :get}, {:body, %{foo: 'foo_val', bar: 'bar_val'}]
   returns the result of an http request, along with http response code, and error if appropriate.
   """
+  def do_make_request(_url, opts \\ [])
   def do_make_request(url, opts) do
     # get http request opts from map and assign defaults if needed
     method = Keyword.get(opts, :method, :get)
@@ -18,15 +18,18 @@ defmodule ReverbApp.HttpReqUtils do
     body = Keyword.get(opts, :body, %{})
     accept = Keyword.get(opts, :accept, "application/json")
     content_type = Keyword.get(opts, :content_type, "application/json")
+    accept_version = Keyword.get(opts, :accept_version)
 
     headers = ["Content-Type": content_type,
-               "Accept": accept]
+               "Accept": accept,
+               "Accept-Version": accept_version]
 
     # strips out header keys with no values
     headers = Enum.filter(headers, fn {k, nil} -> false; _ -> true end)
 
     body_str = case content_type do
                  "application/json" -> Poison.encode!(body)
+                 "application/hal+json" -> Poison.encode!(body)
                  _ -> body
                end
 
@@ -45,6 +48,7 @@ defmodule ReverbApp.HttpReqUtils do
         # decode response body appropriately
         case accept do
           "application/json" -> {:ok, Poison.decode!(response_body)}
+          "application/hal+json" -> {:ok, Poison.decode!(response_body)}
           _ -> {:ok, response_body}
         end
       e ->
