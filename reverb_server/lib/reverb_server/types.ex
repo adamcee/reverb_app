@@ -55,13 +55,13 @@ defmodule ReverbServer.Types do
       web: String.t,
     }
 
-    # def init(map_json) do
-    #   # Convert like {"follow": "href" => "http://google.com"}
-    #   # to  {"follow": "http://google.com"}, etc
-    #   map_json
-    #   |> Enum.map(fn container => container["href"] end)
-    #   |> fn parsed -> struct(CategoryLinks, parsed) end
-    # end
+    def init(map_json) do
+      # Convert like {"follow": "href" => "http://google.com"}
+      # to  {"follow": "http://google.com"}, etc
+      map_json
+      |> Enum.map((fn container -> container["href"] end).())
+      |> (fn parsed -> struct(CategoryLinks, parsed) end).()
+    end
   end
 
  end
