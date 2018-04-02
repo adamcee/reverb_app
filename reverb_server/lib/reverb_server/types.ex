@@ -21,6 +21,19 @@ defmodule ReverbApp.Types do
     }
   end
 
+   defimpl Poison.Encoder, for: Href do
+     def encode(json) do
+       Poison.Encoder.Map.encode(json)
+     end
+   end
+
+   defimpl Poison.Encoder, for: CategoryLinks do
+     def encode(json) do
+       Poison.Encoder.Map.encode(json)
+     end
+   end
+
+
   defmodule Category do
     defstruct [:_links, :collection_title, :collection_title,
       :full_name, :listable, :name, :root_slug, :root_uuid,
@@ -38,18 +51,6 @@ defmodule ReverbApp.Types do
       uuid: String.t(),
     }
   end
-
-   defimpl Poison.Encoder, for: Href do
-     def encode(json) do
-       Poison.Encoder.Map.encode(json)
-     end
-   end
-
-   defimpl Poison.Encoder, for: CategoryLinks do
-     def encode(json) do
-       Poison.Encoder.Map.encode(json)
-     end
-   end
 
    defimpl Poison.Encoder, for: Category do
      def encode(json) do

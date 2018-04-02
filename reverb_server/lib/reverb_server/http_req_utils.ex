@@ -21,11 +21,11 @@ defmodule ReverbApp.HTTPRequestUtils do
   def do_make_request(url, opts \\ []) do
     # get http request opts from map and assign defaults if needed
     method = Keyword.get(opts, :method, :get)
-    params = Keyword.get(opts, :params, %{})
-    body_str = Keyword.get(opts, :body_string, %{})
     accept = Keyword.get(opts, :accept, "application/json")
     content_type = Keyword.get(opts, :content_type, "application/json")
     accept_version = Keyword.get(opts, :accept_version)
+    params = Keyword.get(opts, :params, %{})
+    body_str = Keyword.get(opts, :body_string, %{})
 
     headers = ["Content-Type": content_type,
                "Accept": accept,
@@ -43,8 +43,9 @@ defmodule ReverbApp.HTTPRequestUtils do
         :delete -> {&HTTPotion.delete/2, [headers: headers, body: body_str, timeout: 45_000]}
       end
 
-    # Logger.info("Making call to #{url} with params #{inspect params}")
+
     # execute http request function and return {opts, response_body}, or error
+    # Logger.info("Making call to #{url} with params #{inspect params}")
     case method_fn.(url, opts) do
       %HTTPotion.Response{body: response_body, status_code: code, headers: headers} when 200 <= code and code <= 299 ->
         # Logger.info("Response headers: #{inspect headers}")

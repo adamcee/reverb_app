@@ -16,20 +16,25 @@ defmodule ReverbApp.ReverbAPI do
     make_json_request(endpoint, opts)
   end
 
+  defp post_json(endpoint, opts \\ []) do
+    opts = [{:method, :post} | opts]
+    opts = [{:body_string, EU.encode_req_json(opts)} | opts]
+    make_json_request(endpoint, opts)
+  end
+
+  # make a request to either get or send JSON
   defp make_json_request(endpoint, opts) do
     url = "https://api.reverb.com/api" <> endpoint
 
     opts = [{:accept, "application/hal+json"} | opts]
     opts = [{:accept_version, "3.0"} | opts]
     opts = [{:content_type, "application/hal+json"} | opts]
-    opts = [{:body_string, EU.encode_body(opts)} | opts]
 
     case HTTP.do_make_request(url, opts) do
       {:error, :failure} ->
         Logger.error("Tried call to #{url}, failed.")
         {:error, :failure}
-      {:ok, {opts, response_body}} ->
-        EU.decode_body(opts, response_body)
+      {:ok, {opts, josn}} -> EU.decode_response_json(opts, josn)
     end
   end
 end

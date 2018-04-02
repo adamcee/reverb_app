@@ -7,7 +7,7 @@ defmodule ReverbApp.HTTPEncodingUtils do
   # param: response_body
   # the unencoded http response body string
   # return: encoded http response body string
-  def encode_body(opts) do
+  def encode_req_json(opts) do
     content_type = Keyword.get(opts, :content_type, "application/json")
     body = Keyword.get(opts, :body, %{})
     case content_type do
@@ -22,8 +22,8 @@ defmodule ReverbApp.HTTPEncodingUtils do
   # example: "application/json"
   # param: response_body
   # the undecoded http response body string
-  # return: decoded http response body string
-  def decode_body(accept, response_body) do
+  # return: decoded http response body string (a Map)
+  def decode_response_json(accept, response_body) do
     case accept do
       "application/json" -> {:ok, Poison.decode!(response_body)}
       "application/hal+json" -> {:ok, Poison.decode!(response_body)}
