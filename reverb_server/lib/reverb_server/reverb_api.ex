@@ -11,11 +11,16 @@ defmodule ReverbApp.ReverbAPI do
   @host "https://api.reverb.com/api"
 
   def get_listings_all(params \\ %{}) do
-    HTTP.get_json(@host <> "/listings/all", [{:params, params}])
+    reverb_get_json("/listings/all", [{:params, params}])
   end
 
   def get_categories_flat do
-    HTTP.get_json(@host <> "/categories/flat")
+    reverb_get_json("/categories/flat")
+  end
+
+  defp reverb_get_json(endpoint, opts \\ []) do
+    opts = [{:accept_version, "3.0"} | opts]
+    HTTP.get_json(@host <> endpoint, opts)
   end
 
 end

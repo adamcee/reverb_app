@@ -6,8 +6,8 @@ defmodule ReverbApp.HTTPRequestUtils do
   Mostly helper wrappers around HTTPotion for builidng request headers
   and handling errors.
 
-  Mainly the private functions should be used to compose public functions for building
-  an API module; it should rarely be necessary to make a private function public.
+  Mainly the lower-level functions should be used to compose public functions for building
+  an API module.
   """
 
   require Logger
@@ -15,18 +15,17 @@ defmodule ReverbApp.HTTPRequestUtils do
 
   def get_json(endpoint, opts \\ []) do
     opts = [{:method, :get} | opts]
-    make_json_request(endpoint, opts)
+    make_hal_json_request(endpoint, opts)
   end
 
   def post_json(endpoint, opts \\ []) do
     opts = [{:method, :post} | opts]
     opts = [{:body_string, EU.encode_req_json(opts)} | opts]
-    make_json_request(endpoint, opts)
+    make_hal_json_request(endpoint, opts)
   end
 
-  defp make_json_request(url, opts) do
+  defp make_hal_json_request(url, opts) do
     opts = [{:accept, "application/hal+json"} | opts]
-    opts = [{:accept_version, "3.0"} | opts]
     opts = [{:content_type, "application/hal+json"} | opts]
 
     case do_make_request(url, opts) do
