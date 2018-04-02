@@ -20,7 +20,7 @@ defmodule ReverbApp.ReverbAPI do
 
   defp reverb_get_json(endpoint, opts \\ []) do
     opts = [{:accept_version, "3.0"} | opts]
-    HTTP.get_json(@host <> endpoint, opts)
+    HTTP.get_hal_json(@host <> endpoint, opts)
   end
 
 end

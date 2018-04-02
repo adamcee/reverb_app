@@ -13,12 +13,12 @@ defmodule ReverbApp.HTTPRequestUtils do
   require Logger
   alias ReverbApp.HTTPEncodingUtils, as: EU
 
-  def get_json(endpoint, opts \\ []) do
+  def get_hal_json(endpoint, opts \\ []) do
     opts = [{:method, :get} | opts]
     make_hal_json_request(endpoint, opts)
   end
 
-  def post_json(endpoint, opts \\ []) do
+  def post_hal_json(endpoint, opts \\ []) do
     opts = [{:method, :post} | opts]
     opts = [{:body_string, EU.encode_req_json(opts)} | opts]
     make_hal_json_request(endpoint, opts)
