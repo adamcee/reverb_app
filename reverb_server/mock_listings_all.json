@@ -1,0 +1,1312 @@
+{
+    "_links": {
+        "listing": {
+            "href": "https://reverb.com/sell"
+        },
+        "next": {
+            "href": "https://api.reverb.com/api/listings/all?page=2&per_page=10"
+        }
+    },
+    "current_page": 1,
+    "humanized_params": "Gear",
+    "listings": [
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165775"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165775-fuchs-plush-jersey-thunder-eq-boost-tone-shaper-2010s-purple/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165775-fuchs-plush-jersey-thunder-eq-boost-tone-shaper-2010s-purple/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--1_B0Yely--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640494/yhdrwwwilasl7pii58nx.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165775-fuchs-plush-jersey-thunder-eq-boost-tone-shaper-2010s-purple"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165775-fuchs-plush-jersey-thunder-eq-boost-tone-shaper-2010s-purple"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165775-fuchs-plush-jersey-thunder-eq-boost-tone-shaper-2010s-purple"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Effects and Pedals / Bass Pedals",
+                    "uuid": "c6602a28-e2e7-4e70-abeb-0fa38b320be6"
+                },
+                {
+                    "full_name": "Effects and Pedals / EQ",
+                    "uuid": "ec612b9c-6227-4249-9010-b85b6b0eb5b0"
+                }
+            ],
+            "condition": {
+                "display_name": "Excellent",
+                "slug": "excellent",
+                "uuid": "df268ad1-c462-4ba6-b6db-e007e23922ea"
+            },
+            "created_at": "2018-04-02T13:46:42+10:00",
+            "description": "Very cool EQ tone shaping device, primarily for bassists wishing to hone and sculpt their core basic tone. Selecting EQ curves and boost function. Brings a lively sparkle or helps shape any fuzz or distortion you may use. Also works very well as. Gain reduction/clean up pedal with guitar.<br><br>In excellent shape overall and in perfect working order.<br><br>Pedal only - no box/adaptor etc.",
+            "finish": "Purple",
+            "has_inventory": false,
+            "id": 11165775,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Fuchs",
+            "model": "Jersey Thunder (EQ/Boost/Tone Shaper)",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--9YoYOpfq--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640494/yhdrwwwilasl7pii58nx.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--1_B0Yely--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640494/yhdrwwwilasl7pii58nx.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--dvoCNQrD--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640494/yhdrwwwilasl7pii58nx.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--MO26ClCh--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640494/yhdrwwwilasl7pii58nx.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "84.99",
+                "amount_cents": 8499,
+                "currency": "USD",
+                "display": "$84.99",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:46:42+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "24.99",
+                            "amount_cents": 2499,
+                            "currency": "USD",
+                            "display": "$24.99",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "24.99",
+                            "amount_cents": 2499,
+                            "currency": "USD",
+                            "display": "$24.99",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "XX"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "24.99",
+                            "amount_cents": 2499,
+                            "currency": "USD",
+                            "display": "$24.99",
+                            "symbol": "$"
+                        },
+                        "region_code": "JP"
+                    },
+                    {
+                        "rate": {
+                            "amount": "24.99",
+                            "amount_cents": 2499,
+                            "currency": "USD",
+                            "display": "$24.99",
+                            "symbol": "$"
+                        },
+                        "region_code": "US"
+                    },
+                    {
+                        "rate": {
+                            "amount": "24.99",
+                            "amount_cents": 2499,
+                            "currency": "USD",
+                            "display": "$24.99",
+                            "symbol": "$"
+                        },
+                        "region_code": "XX"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "japanvintagefx"
+            },
+            "shop_id": 346799,
+            "shop_name": "JapanVintageFX",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Fuchs Plush Jersey Thunder (EQ/Boost/Tone Shaper) 2010s Purple",
+            "year": "2010s"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165485"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165485-hofner-hi-cb-sb-single-cutaway-ignition-club-bass-2018-sunburst-w-hofner-ohs-case/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165485-hofner-hi-cb-sb-single-cutaway-ignition-club-bass-2018-sunburst-w-hofner-ohs-case/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--hRQrLffU--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640062/xkeyegzt9jzkttbyinmg.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165485-hofner-hi-cb-sb-single-cutaway-ignition-club-bass-2018-sunburst-w-hofner-ohs-case"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165485-hofner-hi-cb-sb-single-cutaway-ignition-club-bass-2018-sunburst-w-hofner-ohs-case"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165485-hofner-hi-cb-sb-single-cutaway-ignition-club-bass-2018-sunburst-w-hofner-ohs-case"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Bass Guitars / 4-String",
+                    "uuid": "ac571749-28c7-4eec-a1d9-09dca3cf3e5f"
+                }
+            ],
+            "condition": {
+                "display_name": "Brand New",
+                "slug": "brand-new",
+                "uuid": "7c3f45de-2ae0-4c81-8400-fdb6b1d74890"
+            },
+            "created_at": "2018-04-02T13:41:22+10:00",
+            "description": "For sale, brand new Hofner twin pickup hollow body bass with brand new Hofner hard shell case. Selling because I am now retired, and I need the money and have too many bass guitars. <br><br>My son just bought for me a Gibson EB-0, to go with my EB-2 Gibson semi hollow body bass.<br><br>\n<div><p><span>This Les-shaped model is commonly named as the \"Club bass.\"</span></p><p><span>With\n authentic details inspired by the original, the Hofner Icon Series \nVintage Bass makes the legendary Club bass available to the rest of us.</span></p><p><span>Don't\n get the idea that this a just a \"nowhere man\" look-alike. This quality \ninstrument features a real spruce top and beautiful flamed maple back \nand sides.</span></p><p><span>The hollow body and set neck will give you the warm, round tone you expect from the Club bass. </span>\u00a0</p></div><div><p><span>this\n model features a maple set neck with rosewood fretboard accentuated by \nmother-of-pearl dot inlays, the signature H\u00f6fner violin bass headstock,</span></p><p><span>\u00a0a\n trapeze tailpiece, and glossy spruce top with glossy flamed maple back \nand sides. An ebony bridge with movable metal saddles maintains \nintonation and string spacing.</span></p><p><span>The nickel-plated hardware and floating celluloid pearl pickguard give it an extra little pop for the eyes.</span></p><p><span>On\n the electronics side, you're working with two original H\u00f6fner \nhumbucking pickups, as well as a control panel with 2 volume controls, 2\n on/off switches, and a rhythm/solo switch for volume boost.</span></p><p><span>The overall sound is warm like the original model, but with a little more sonic kick for a more \"now\" sound.</span>\u00a0</p></div><div><p><span>Hofner Ignition Series Vintage Club Bass Features:</span></p><ul><li><span>Authentic details inspired by the original</span></li><li><span>Spruce top</span></li><li><span>Flamed maple back and sides</span></li><li><span>Set neck</span></li><li><span>Rosewood fretboard</span></li><li><span>30\" scale</span></li><li><span>22 frets</span></li><li><span>Dot inlay</span></li><li><span>Weight 4.90 Lbs</span></li></ul></div>\n\n<br>",
+            "finish": "\"Sunburst\"",
+            "has_inventory": false,
+            "id": 11165485,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Hofner",
+            "model": "HI-CB-SB single Cutaway Ignition Club Bass",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--DhetRBPP--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640062/xkeyegzt9jzkttbyinmg.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--hRQrLffU--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640062/xkeyegzt9jzkttbyinmg.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--5eyOAoCf--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640062/xkeyegzt9jzkttbyinmg.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--lfla-ZbJ--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640062/xkeyegzt9jzkttbyinmg.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "425.00",
+                "amount_cents": 42500,
+                "currency": "USD",
+                "display": "$425",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:46:40+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": true,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "mels-music-boutique"
+            },
+            "shop_id": 702774,
+            "shop_name": "Mel's Music Boutique",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Hofner HI-CB-SB single Cutaway Ignition Club Bass 2018 \"Sunburst\" w/Hofner OHS Case",
+            "year": "2018"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165739"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165739-david-allen-54-59-vintage-hot-stratocaster-bridge-pickup/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165739-david-allen-54-59-vintage-hot-stratocaster-bridge-pickup/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--yaK2ksGo--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640591/fzdskyywdreff4dqn1i3.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165739-david-allen-54-59-vintage-hot-stratocaster-bridge-pickup"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165739-david-allen-54-59-vintage-hot-stratocaster-bridge-pickup"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165739-david-allen-54-59-vintage-hot-stratocaster-bridge-pickup"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Parts / Guitar Pickups",
+                    "uuid": "ed9714d2-2b98-4e1e-b85e-eb2f948a8985"
+                }
+            ],
+            "condition": {
+                "display_name": "Very Good",
+                "slug": "very-good",
+                "uuid": "ae4d9114-1bd7-4ec5-a4ba-6653af5ac84d"
+            },
+            "created_at": "2018-04-02T13:46:26+10:00",
+            "description": "<span>This is a DAVID ALLEN boutique Stratocaster bridge pickup, created and built by the world-renowned pickup craftsman David Allen. This particular pickup is from his \"54/59 VINTAGE HOT\" pickup set. This is the bridge pickup only. This pickup was made using only top-quality components and the sound truly reflects the quality and care that has been put into the creation and design of this pickup. When these pickups were sold new, the set of David Allen 54/59 Vintage Hot pickups retailed anywhere from $200-$250. I will include the original mounting screws and springs. The pickup works exactly as it should and sounds marvelous! With TONS OF BITING VINTAGE FLAVOR, this pickup will truly open up the bridge position of any Strat-style guitar.</span><br><span>\u00a0Unfortunately, I no longer have the pickup's original packaging, but it will be shipped with great care. </span><br><br><span>Thanks for stopping by,</span><br><span>Let's get in touch!</span><br>",
+            "finish": "",
+            "has_inventory": false,
+            "id": 11165739,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "David Allen Pickups",
+            "model": "54/59 Vintage Hot Stratocaster Bridge Pickup",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--TWGrEoZN--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640591/fzdskyywdreff4dqn1i3.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--yaK2ksGo--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640591/fzdskyywdreff4dqn1i3.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--Rm7FF9Lv--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640591/fzdskyywdreff4dqn1i3.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--oDyBguW6--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640591/fzdskyywdreff4dqn1i3.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "65.00",
+                "amount_cents": 6500,
+                "currency": "USD",
+                "display": "$65",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:46:32+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "8.00",
+                            "amount_cents": 800,
+                            "currency": "USD",
+                            "display": "$8",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "8.00",
+                            "amount_cents": 800,
+                            "currency": "USD",
+                            "display": "$8",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "8.00",
+                            "amount_cents": 800,
+                            "currency": "USD",
+                            "display": "$8",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "things-that-currently-belong-to-cole-that-can-belong-to-you"
+            },
+            "shop_id": 702685,
+            "shop_name": "Things that currently belong to Cole that CAN belong to you",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "David Allen 54/59 Vintage Hot Stratocaster Bridge Pickup",
+            "year": ""
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165650"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165650-alexander-pedals-equilibrium-tremolo/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165650-alexander-pedals-equilibrium-tremolo/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--koSv2cP5--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640600/pdghytnutf1xi0r6oynb.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165650-alexander-pedals-equilibrium-tremolo"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165650-alexander-pedals-equilibrium-tremolo"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165650-alexander-pedals-equilibrium-tremolo"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Effects and Pedals / Tremolo and Vibrato",
+                    "uuid": "38f7f86b-5d7a-499a-9bdc-c3198395dfa6"
+                }
+            ],
+            "condition": {
+                "display_name": "Mint",
+                "slug": "mint",
+                "uuid": "ac5b9c1e-dc78-466d-b0b3-7cf712967a48"
+            },
+            "created_at": "2018-04-02T13:46:07+10:00",
+            "description": "Great condition Tremolo pedal with standard tremolo, harmonic tremolo &amp; true pitch vibrato.  Nice bunch of features on top of that like multiple wave shapes and mix control for making univibe and phase tones.",
+            "finish": "",
+            "has_inventory": false,
+            "id": 11165650,
+            "inventory": 1,
+            "listing_currency": "AUD",
+            "make": "Alexander Pedals",
+            "model": "Equilibrium Tremolo",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--ZZ1lPU1b--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640600/pdghytnutf1xi0r6oynb.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--koSv2cP5--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640600/pdghytnutf1xi0r6oynb.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--UeE6sIXw--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640600/pdghytnutf1xi0r6oynb.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--syLwh-w3--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640600/pdghytnutf1xi0r6oynb.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "150.89",
+                "amount_cents": 15089,
+                "currency": "USD",
+                "display": "$150.89",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:46:07+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "19.85",
+                            "amount_cents": 1985,
+                            "currency": "USD",
+                            "display": "$19.85",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "25.00",
+                            "amount_cents": 2500,
+                            "currency": "AUD",
+                            "display": "$25",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "XX"
+                },
+                "local": true,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "region_code": "AU"
+                    },
+                    {
+                        "rate": {
+                            "amount": "19.85",
+                            "amount_cents": 1985,
+                            "currency": "USD",
+                            "display": "$19.85",
+                            "symbol": "$"
+                        },
+                        "region_code": "US"
+                    },
+                    {
+                        "rate": {
+                            "amount": "19.85",
+                            "amount_cents": 1985,
+                            "currency": "USD",
+                            "display": "$19.85",
+                            "symbol": "$"
+                        },
+                        "region_code": "XX"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "benjamins-gear-locker-21"
+            },
+            "shop_id": 171406,
+            "shop_name": "Gear Boudoir",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Alexander Pedals Equilibrium Tremolo",
+            "year": ""
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165596"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165596-1999-fender-usa-texas-special-stratocaster-neck-pickup/edit"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--PEuJtlH5--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640608/gmwpfuhodjypjllfimdo.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165596-1999-fender-usa-texas-special-stratocaster-neck-pickup"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165596-1999-fender-usa-texas-special-stratocaster-neck-pickup"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165596-1999-fender-usa-texas-special-stratocaster-neck-pickup"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Parts / Guitar Pickups",
+                    "uuid": "ed9714d2-2b98-4e1e-b85e-eb2f948a8985"
+                }
+            ],
+            "condition": {
+                "display_name": "Excellent",
+                "slug": "excellent",
+                "uuid": "df268ad1-c462-4ba6-b6db-e007e23922ea"
+            },
+            "created_at": "2018-04-02T13:45:29+10:00",
+            "description": "<span><b>This is an old school, 1999 factory \nFender Texas Special Stratocaster neck pickup.  It is shows normal signs\n of age, but is without issues.  These early Texas Special's are very \nnice pickups and have great tone.  It reads 6.2k and had full leads. \nActual pictures of the pickup you are buying</b></span>",
+            "finish": "",
+            "has_inventory": false,
+            "id": 11165596,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Fender",
+            "model": "pickup",
+            "offers_enabled": false,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--0m2X95YO--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640608/gmwpfuhodjypjllfimdo.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--PEuJtlH5--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640608/gmwpfuhodjypjllfimdo.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--4FqdvpTh--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640608/gmwpfuhodjypjllfimdo.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--nIKA1FXH--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640608/gmwpfuhodjypjllfimdo.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "49.99",
+                "amount_cents": 4999,
+                "currency": "USD",
+                "display": "$49.99",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:45:36+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "22.00",
+                            "amount_cents": 2200,
+                            "currency": "USD",
+                            "display": "$22",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "22.00",
+                            "amount_cents": 2200,
+                            "currency": "USD",
+                            "display": "$22",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "XX"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    },
+                    {
+                        "rate": {
+                            "amount": "22.00",
+                            "amount_cents": 2200,
+                            "currency": "USD",
+                            "display": "$22",
+                            "symbol": "$"
+                        },
+                        "region_code": "XX"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "toneville-usa"
+            },
+            "shop_id": 104201,
+            "shop_name": "Toneville USA",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "1999 Fender USA Texas Special Stratocaster Neck Pickup",
+            "year": "1999"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165326"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165326-ibanez-prestige-mij-rg2570e-1570body-dimarzio-brass-block-hardshell-case-custom-ized-made-in-japan/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165326-ibanez-prestige-mij-rg2570e-1570body-dimarzio-brass-block-hardshell-case-custom-ized-made-in-japan/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--8suPPx6U--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522639478/cihpljywybiglb4amrgl.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165326-ibanez-prestige-mij-rg2570e-1570body-dimarzio-brass-block-hardshell-case-custom-ized-made-in-japan"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165326-ibanez-prestige-mij-rg2570e-1570body-dimarzio-brass-block-hardshell-case-custom-ized-made-in-japan"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165326-ibanez-prestige-mij-rg2570e-1570body-dimarzio-brass-block-hardshell-case-custom-ized-made-in-japan"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Electric Guitars / Solid Body",
+                    "uuid": "e57deb7a-382b-4e18-a008-67d4fbcb2879"
+                }
+            ],
+            "condition": {
+                "display_name": "Very Good",
+                "slug": "very-good",
+                "uuid": "ae4d9114-1bd7-4ec5-a4ba-6653af5ac84d"
+            },
+            "created_at": "2018-04-02T13:30:10+10:00",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n<p>For sale is\na customized 2007 Ibanez Prestige RG2570E (Ibanez Prestige RG1570 body) in great\ncondition, with a hardshell case \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<span>(which\nhas a built-in tuner)</span>. This Made in Japan guitar plays and sounds\ngreat.</p><p>The upgraded Dimarzio\npickups (Air Norton neck, AT-1 Andy Timmons bridge) are versatile, especially\nwith the 5-way super switch.</p><p>The tremolo\nblock has been upgraded to a tapered FU-Tone brass block, increasing sustain\nand producing a richer tone, while also allowing for full tremolo dive up and\ndown.</p><p>This clean, quality\nIbanez Prestige is currently set up with D\u2019Addario 10-46 strings for standard\ntuning and low action. The guitar has some light surface scratches and some\nfret wear (the frets have much life left).</p><p>The\nhardshell case\u2019s handle is detached (though included).</p><p><b>GUITAR HISTORY</b></p><p>I purchased\nthis RG2570E new in 2007. Later in 2007, I refinished the factory Vital Silver textured\nbody and black headstock in color changing paint (rust to green). I applied an\naftermarket silver Ibanez decal to the headstock prior to the clearcoat\n(following the paint and black primer layers). \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<span>In\n2008, I replaced the body with that of an Ibanez Prestige 1570 in Mirage Blue\n(blue, green, &amp; purple sparkle fibers).</span>\n\n\n\n</p><p>After\nreplacing the body, I added the green mirror pickguard, Dimarzio pickups, and a\n5-way Fender superswitch.</p><p><b><br></b></p><p><b>Included\nwith the guitar and case:</b></p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<ul><li>Original tremolo bar</li><li>Original Ibanez Edge Pro 6 tremolo block</li><li>7mm truss rod adjustment wrench</li><li>3mm hex wrench for the pressure pads, bridge\nheight adjustment, and string locking/unlocking at the saddles</li><li>2mm hex wrench for saddle intonation adjustment</li><li>Installed Dunlop straplocks (entire system included)</li><li>Original strap buttons</li><li>Strap (ESP Guitars brand, leather)</li><li>Bronze mirror HSH pickguard (I had a middle\nsingle on the guitar for some time \u2013 the RG1570 body is factory routed for the\nHSH configuration)</li></ul><p>The Mega Man/Hulk\nsticker on the truss rod cover is removable.</p>\n\n\n\n<p>\u00a0</p>\n\n<p><b><u>SPECIFICATIONS</u></b>\u00a0</p>\n\n\n\n<p><b>MODEL</b>: RG2570E Prestige (RG1570 Prestige\nbody)</p>\n\n<p><b>YEAR</b>: 2007</p>\n\n<p><b>MADE IN</b>: Japan</p>\n\n<p><b>BODY</b>: Basswood</p>\n\n<p><b>BODY COLOR</b>: Mirage Blue, gloss finish</p>\n\n<p><b>NECK JOINT</b>: All Access Neck Joint</p>\n\n<p><b>SCALE LENGTH</b>: 25.5\u201d/648mm</p>\n\n<p><b>NECK</b>: Wizard Prestige 5-piece Maple/Walnut\n(43mm nut width, 18mm thickness at 1st fret, 20mm thickness at 12th\nfret), satin finish</p>\n\n<p><b>FRETBOARD MATERIAL</b>: Rosewood with\nwhite binding and silver wedge sharktooth inlays<b></b></p>\n\n<p><b>FRETBOARD RADIUS</b>: 430mm</p>\n\n<p><b>FRETS</b>: 24 jumbo</p>\n\n<p><b>BRIDGE</b>: Edge Pro 6 (with upgraded\nFU-Tone tapered brass tremolo block)</p>\n\n<p><b>PICKUPS</b>: Dimarzio Air Norton DP293\n(neck) and Dimarzio AT-1 Andy Timmons DP224 (bridge)</p>\n\n<p><b>ELECTRONICS</b>: 1 volume, 1 tone, 5-way\nswitch (full neck, outside coils, full neck + full bridge, inside coils, full\nbridge)</p>\n\n<p><b>TUNING MACHINES</b>: Gotoh</p>\n\n<p><b>HARDWARE COLOR</b>: Cosmo Black</p>\n\n",
+            "finish": "Multi Color",
+            "has_inventory": false,
+            "id": 11165326,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Ibanez",
+            "model": "RG Prestige",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--qur3h1N_--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522639478/cihpljywybiglb4amrgl.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--8suPPx6U--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522639478/cihpljywybiglb4amrgl.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--CocDx898--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522639478/cihpljywybiglb4amrgl.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--e4poEHJL--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522639478/cihpljywybiglb4amrgl.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "550.00",
+                "amount_cents": 55000,
+                "currency": "USD",
+                "display": "$550",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:45:22+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": true,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    },
+                    {
+                        "rate": {
+                            "amount": "100.00",
+                            "amount_cents": 10000,
+                            "currency": "USD",
+                            "display": "$100",
+                            "symbol": "$"
+                        },
+                        "region_code": "CA"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "ilikecerealinthemorn"
+            },
+            "shop_id": 514130,
+            "shop_name": "ilikecerealinthemorn",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Ibanez Prestige MIJ RG2570E/1570body Dimarzio Brass Block&Hardshell Case custom-ized Made in Japan",
+            "year": "2007"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165497"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165497-pearl-rhythm-traveler-black-drum-set/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165497-pearl-rhythm-traveler-black-drum-set/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--2mLRVbLD--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640183/lup5c0wqlh3rwve1vavs.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165497-pearl-rhythm-traveler-black-drum-set"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165497-pearl-rhythm-traveler-black-drum-set"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165497-pearl-rhythm-traveler-black-drum-set"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Drums and Percussion / Acoustic Drums / Full Acoustic Kits",
+                    "uuid": "b905874b-ecdd-43f0-99e5-5c4d6857ff99"
+                }
+            ],
+            "condition": {
+                "display_name": "Very Good",
+                "slug": "very-good",
+                "uuid": "ae4d9114-1bd7-4ec5-a4ba-6653af5ac84d"
+            },
+            "created_at": "2018-04-02T13:44:54+10:00",
+            "description": "Here\u2019s a great sounding compact size drum set, shells and mounting bars only.<br>Kick-20\u201d<br>Toms-10, 12, 14\u201d<br>Snare-13\u201d<br>The snare is a piccolo, but I will include original snare (it is missing a few parts).  Mounting bars included.<br>All other Hardware not included.<br>Cymbals not included.",
+            "finish": "Black",
+            "has_inventory": false,
+            "id": 11165497,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Pearl",
+            "model": "Rhythm Traveler",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s---57lEtu4--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640183/lup5c0wqlh3rwve1vavs.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--2mLRVbLD--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640183/lup5c0wqlh3rwve1vavs.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--ty_7ONIT--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640183/lup5c0wqlh3rwve1vavs.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--sp9dLsW---/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640183/lup5c0wqlh3rwve1vavs.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "200.00",
+                "amount_cents": 20000,
+                "currency": "USD",
+                "display": "$200",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:44:55+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "30.00",
+                            "amount_cents": 3000,
+                            "currency": "USD",
+                            "display": "$30",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "30.00",
+                            "amount_cents": 3000,
+                            "currency": "USD",
+                            "display": "$30",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "30.00",
+                            "amount_cents": 3000,
+                            "currency": "USD",
+                            "display": "$30",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "jds-guitar-shop"
+            },
+            "shop_id": 349281,
+            "shop_name": "JD's Guitar Shop",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Pearl Rhythm Traveler Black Drum Set",
+            "year": ""
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165496"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165496-tiptop-audio-bd808-eurorack-bass-drum-2017-silver/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165496-tiptop-audio-bd808-eurorack-bass-drum-2017-silver/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--Ri_9sJ-9--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640436/xk0mgknk4p5gm4mexh96.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165496-tiptop-audio-bd808-eurorack-bass-drum-2017-silver"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165496-tiptop-audio-bd808-eurorack-bass-drum-2017-silver"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165496-tiptop-audio-bd808-eurorack-bass-drum-2017-silver"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Keyboards and Synths / Synths / Eurorack",
+                    "uuid": "32488d42-5c28-4568-a929-046578604fda"
+                }
+            ],
+            "condition": {
+                "display_name": "Excellent",
+                "slug": "excellent",
+                "uuid": "df268ad1-c462-4ba6-b6db-e007e23922ea"
+            },
+            "created_at": "2018-04-02T13:44:41+10:00",
+            "description": "<p><span>In perfect working order.\u00a0 I've just decided to handle drums outside of the modular synth case.\u00a0</span></p><p><span>\"Introducing the BD808, part of our new series of drum modules that brings analog percussion into the modular synth world, instantly turning your system into a self-contained music machine. Its small size, minimalist design and modern production methods have allowed us to bring the world\u2019s most famous bass drum sound generator back at a very low cost. The real thing is here again.</span></p><p><span>The BD808 is the Roland TR-808\u2019s Bass Drum circuit adapted for use in Eurorack format and tuned to sound like a machine that come fresh off the original 80\u2019s assembly line. The adaption to modular format has allowed us to add some special features like independent Accent level, a high-powered gain stage, dual input pulse-shaper and extended decay; all without compromising the signature sound of the TR-808.\"</span></p><p><span><br></span></p><p><span><br></span></p>",
+            "finish": "Silver",
+            "has_inventory": false,
+            "id": 11165496,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Tiptop Audio",
+            "model": "BD808 Eurorack Bass Drum",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--Wc5C58da--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640436/xk0mgknk4p5gm4mexh96.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--Ri_9sJ-9--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640436/xk0mgknk4p5gm4mexh96.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--_y_0d65u--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640436/xk0mgknk4p5gm4mexh96.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--fQCMQV2H--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640436/xk0mgknk4p5gm4mexh96.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "79.77",
+                "amount_cents": 7977,
+                "currency": "USD",
+                "display": "$79.77",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:44:54+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "7.00",
+                            "amount_cents": 700,
+                            "currency": "USD",
+                            "display": "$7",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "7.00",
+                            "amount_cents": 700,
+                            "currency": "USD",
+                            "display": "$7",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "7.00",
+                            "amount_cents": 700,
+                            "currency": "USD",
+                            "display": "$7",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "rods-gear-outlet-32"
+            },
+            "shop_id": 565927,
+            "shop_name": "Rod's Gear Outlet",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Tiptop Audio BD808 Eurorack Bass Drum 2017 Silver",
+            "year": "2017"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165493"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165493-ibanez-prestige-rg752fx-gk-2016-galaxy-black-brand-new-condition/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165493-ibanez-prestige-rg752fx-gk-2016-galaxy-black-brand-new-condition/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--cRJskvCq--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522639536/dtavxjdc3n9flspafcbg.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165493-ibanez-prestige-rg752fx-gk-2016-galaxy-black-brand-new-condition"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165493-ibanez-prestige-rg752fx-gk-2016-galaxy-black-brand-new-condition"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165493-ibanez-prestige-rg752fx-gk-2016-galaxy-black-brand-new-condition"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Electric Guitars / Solid Body",
+                    "uuid": "e57deb7a-382b-4e18-a008-67d4fbcb2879"
+                }
+            ],
+            "condition": {
+                "display_name": "Mint",
+                "slug": "mint",
+                "uuid": "ac5b9c1e-dc78-466d-b0b3-7cf712967a48"
+            },
+            "created_at": "2018-04-02T13:43:23+10:00",
+            "description": "For Sale is my RG752 FX in Galaxy black. Rare and popular finish.<br><br>The guitar is in Brand new condition but I'm not a dealer so I can't declare it as brand new. There are no chips or dings anywhere and almost zero fretwear(make sure to go through the photos). And it is reflected in the price.<br>The galaxy black finsih was discontinued in 2017 and you might not find one in this condition again.<br><br>All stock with the toolbox(also new) and hard case.<br><br>I ship insured. Thanks for looking.",
+            "finish": "Galaxy Black",
+            "has_inventory": false,
+            "id": 11165493,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "Ibanez",
+            "model": "RG752FX-GK",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--9Jpn7pbY--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522639536/dtavxjdc3n9flspafcbg.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--cRJskvCq--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522639536/dtavxjdc3n9flspafcbg.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--k4f2gGpJ--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522639536/dtavxjdc3n9flspafcbg.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--oGDh9ia6--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522639536/dtavxjdc3n9flspafcbg.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "1100.00",
+                "amount_cents": 110000,
+                "currency": "USD",
+                "display": "$1,100",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:44:32+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "CA"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "60.00",
+                            "amount_cents": 6000,
+                            "currency": "USD",
+                            "display": "$60",
+                            "symbol": "$"
+                        },
+                        "region_code": "CA"
+                    },
+                    {
+                        "rate": {
+                            "amount": "100.00",
+                            "amount_cents": 10000,
+                            "currency": "USD",
+                            "display": "$100",
+                            "symbol": "$"
+                        },
+                        "region_code": "US"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": true,
+                "slug": "shred-box-of-chocolates"
+            },
+            "shop_id": 127132,
+            "shop_name": "Shredder's Box Of Chocolates",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "Ibanez Prestige RG752FX-GK 2016 Galaxy Black Brand New Condition",
+            "year": "2016"
+        },
+        {
+            "_links": {
+                "cart": {
+                    "href": "https://api.reverb.com/api/cart/11165495"
+                },
+                "edit": {
+                    "href": "https://api.reverb.com/api/listings/11165495-earthquaker-devices-data-corrupter/edit"
+                },
+                "make_offer": {
+                    "href": "https://api.reverb.com/api/listings/11165495-earthquaker-devices-data-corrupter/offer",
+                    "method": "POST"
+                },
+                "photo": {
+                    "href": "https://images.reverb.com/image/upload/s--RHnwmCUX--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640338/z8hup0w6humbkhbbagun.jpg"
+                },
+                "self": {
+                    "href": "https://api.reverb.com/api/listings/11165495-earthquaker-devices-data-corrupter"
+                },
+                "watchlist": {
+                    "href": "https://api.reverb.com/api/wants/11165495-earthquaker-devices-data-corrupter"
+                },
+                "web": {
+                    "href": "https://reverb.com/item/11165495-earthquaker-devices-data-corrupter"
+                }
+            },
+            "auction": false,
+            "categories": [
+                {
+                    "full_name": "Effects and Pedals / Fuzz",
+                    "uuid": "305e09a1-f9cb-4171-8a70-6428ad1b55a8"
+                },
+                {
+                    "full_name": "Effects and Pedals / Octave and Pitch",
+                    "uuid": "8dab3e10-a7f8-444b-aa9d-ccdab4fe66c6"
+                }
+            ],
+            "condition": {
+                "display_name": "Mint",
+                "slug": "mint",
+                "uuid": "ac5b9c1e-dc78-466d-b0b3-7cf712967a48"
+            },
+            "created_at": "2018-04-02T13:43:59+10:00",
+            "description": "It\u2019s a Modulated Monophonic Harmonizing PLL. Basically a freak of a pedal. Very little play time. Comes with box, bag and manual/swag. Does have velcro. ",
+            "finish": "",
+            "has_inventory": false,
+            "id": 11165495,
+            "inventory": 1,
+            "listing_currency": "USD",
+            "make": "EarthQuaker Devices",
+            "model": "Data Corrupter",
+            "offers_enabled": true,
+            "photos": [
+                {
+                    "_links": {
+                        "full": {
+                            "href": "https://images.reverb.com/image/upload/s--CUHXx8me--/a_exif,c_limit,f_auto,fl_progressive,g_south,h_1136,q_auto:eco,w_640/v1522640338/z8hup0w6humbkhbbagun.jpg"
+                        },
+                        "large_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--RHnwmCUX--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_640,q_auto:eco,w_640/v1522640338/z8hup0w6humbkhbbagun.jpg"
+                        },
+                        "small_crop": {
+                            "href": "https://images.reverb.com/image/upload/s--fmSr-9Gu--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_296,q_auto:eco,w_296/v1522640338/z8hup0w6humbkhbbagun.jpg"
+                        },
+                        "thumbnail": {
+                            "href": "https://images.reverb.com/image/upload/s--qtw3As9A--/a_exif,c_thumb,f_auto,fl_progressive,g_south,h_192,q_auto:eco,w_192/v1522640338/z8hup0w6humbkhbbagun.jpg"
+                        }
+                    }
+                }
+            ],
+            "price": {
+                "amount": "200.00",
+                "amount_cents": 20000,
+                "currency": "USD",
+                "display": "$200",
+                "symbol": "$",
+                "tax_included": false
+            },
+            "published_at": "2018-04-02T13:44:19+10:00",
+            "shipping": {
+                "free_expedited_shipping": false,
+                "initial_offer_rate": {
+                    "rate": {
+                        "display": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "original": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        }
+                    },
+                    "region_code": "US_CON"
+                },
+                "local": false,
+                "rates": [
+                    {
+                        "rate": {
+                            "amount": "0.00",
+                            "amount_cents": 0,
+                            "currency": "USD",
+                            "display": "FREE",
+                            "symbol": "$"
+                        },
+                        "region_code": "US_CON"
+                    }
+                ]
+            },
+            "shop": {
+                "preferred_seller": false,
+                "slug": "the-dust-test"
+            },
+            "shop_id": 440399,
+            "shop_name": "The Dust Test",
+            "state": {
+                "description": "Live",
+                "slug": "live"
+            },
+            "title": "EarthQuaker Devices Data Corrupter",
+            "year": ""
+        }
+    ],
+    "per_page": 10,
+    "ships_to": "Everywhere Else",
+    "total": 876739,
+    "total_pages": 50
+}
