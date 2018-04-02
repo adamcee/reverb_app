@@ -1,4 +1,8 @@
 defmodule ReverbApp.Utils do
+  @moduledoc """
+  Utility/Helper functions
+  """
+
   # from: https://stackoverflow.com/posts/30700541/revisions
   defmodule ValidateUri do
     def validate_uri(str) do

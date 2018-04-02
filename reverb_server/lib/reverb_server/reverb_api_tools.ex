@@ -15,19 +15,12 @@ defmodule ReverbApp.ReverbAPITools do
   """
   def get_categories_with_string(token \\ "") do
     case API.get_categories_flat() do
-      {:error, _} -> :error
+      {:error, msg} ->
+        {:error, msg}
       {:ok, %{"categories" => categories}} ->
-      Enum.filter(categories, fn(c) -> is_in_category_name(token, c) end)
+        Enum.filter(categories, fn(c) ->
+          String.contains?(String.downcase(c["full_name"]), String.downcase(token)) end)
     end
-  end
-
-  @doc """
-  token - String token
-  cat - Category map
-  returns - Boolean
-  """
-  defp is_in_category_name(token, cat) do
-    String.contains?(String.downcase(cat["full_name"]), String.downcase(token))
   end
 
 end
