@@ -1,6 +1,6 @@
 defmodule ReverbApp.ReverbAPITools do
   @moduledoc """
-  Tools which call the ReverbAPI module and do something with the data,
+  Tools which use the ReverbAPI module and do something with the data,
   or, manipulate said data once it has been retrieved.
   """
 

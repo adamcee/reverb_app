@@ -38,9 +38,10 @@ defmodule ReverbApp.HTTPRequestUtils do
   end
 
   @doc """
-  NOTE: The calling code is responsible for the encoding of the request body
-  and the decoding of response body. This allows for custom content types
-  to be nicely handled.
+  NOTE: The code calling this function is responsible
+  for the encoding of the request body and the decoding
+  of response body. This allows for custom content
+  types to be nicely handled.
 
   param: url
   string, url to request from.
@@ -78,7 +79,6 @@ defmodule ReverbApp.HTTPRequestUtils do
         :post -> {&HTTPotion.post/2, [headers: headers, body: body_str, timeout: 45_000]}
         :delete -> {&HTTPotion.delete/2, [headers: headers, body: body_str, timeout: 45_000]}
       end
-
 
     # execute http request function and return {opts, response_body}, or error
     # Logger.info("Making call to #{url} with params #{inspect params}")

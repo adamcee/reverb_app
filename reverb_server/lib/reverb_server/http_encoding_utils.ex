@@ -7,12 +7,14 @@ defmodule ReverbApp.HTTPEncodingUtils do
 
   require Logger
 
-  # encodes response body
-  # param: content_type
-  # example: "application/json"
-  # param: response_body
-  # the unencoded http response body string
-  # return: encoded http response body string
+  @doc """
+  encodes response body
+  param: content_type
+  example: "application/json"
+  param: response_body
+  the unencoded http response body string
+  return: encoded http response body string
+  """
   def encode_req_json(opts) do
     content_type = Keyword.get(opts, :content_type, "application/json")
     body = Keyword.get(opts, :body, %{})
@@ -23,12 +25,14 @@ defmodule ReverbApp.HTTPEncodingUtils do
     end
   end
 
-  # decodes response body
-  # param: accept
-  # example: "application/json"
-  # param: response_body
-  # the undecoded http response body string
-  # return: decoded http response body string (a Map)
+  @doc """
+  decodes response body
+  param: accept
+  example: "application/json"
+  param: response_body
+  the undecoded http response body string
+  return: decoded http response body string (a Map)
+  """
   def decode_response_json(accept, response_body) do
     case accept do
       "application/json" -> {:ok, Poison.decode!(response_body)}
