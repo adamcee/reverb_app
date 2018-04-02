@@ -1,25 +1,33 @@
 defmodule ReverbApp.ReverbAPITools do
+  @moduledoc """
+  Tools which call the ReverbAPI module and do something with the data,
+  or, manipulate said data once it has been retrieved.
+  """
+
   alias ReverbApp.ReverbAPI, as: API
   require Logger
 
   @doc """
-  Return list of all categories whose full name contains the str_token param.
-  Default str_token val is empty string, all categories will be returned.
+  HTTP GETS all Reverb categories. Then filters category list for those
+  whose full name contains the token string param.
+  token - String token. Default val of "" will return all categories.
+  returns - List of categories whose full name contains the desired string token.
   """
-  def get_categories_containing(str_token \\ "") do
+  def get_categories_with_string(token \\ "") do
     case API.get_categories_flat() do
       {:error, _} -> :error
       {:ok, %{"categories" => categories}} ->
-        Logger.info("Do stuff here!")
-        Enum.filter(categories, fn(cat) -> is_in_category_name(str_token, cat) end)
+      Enum.filter(categories, fn(c) -> is_in_category_name(token, c) end)
     end
   end
 
-  defp is_in_category_name(str_token, category) do
-    Logger.info("Comparing #{str_token} to cat #{inspect category["full_name"]}")
-    str_token = String.downcase(str_token)
-    full_name = String.downcase(category["full_name"])
-    String.contains?(full_name, str_token)
+  @doc """
+  token - String token
+  cat - Category map
+  returns - Boolean
+  """
+  defp is_in_category_name(token, cat) do
+    String.contains?(String.downcase(cat["full_name"]), String.downcase(token))
   end
 
 end

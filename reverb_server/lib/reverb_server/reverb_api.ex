@@ -1,4 +1,10 @@
 defmodule ReverbApp.ReverbAPI do
+  @moduledoc"""
+  Functions to interact with the Reverb API.
+  Includes some lower-level HTTP Request private functions which should be used
+  to compose the API-calling public functions. Use in conjunction with HTTPEncodingUtils.
+  """
+
   alias ReverbApp.HTTPRequestUtils, as: HTTP
   alias ReverbApp.HTTPEncodingUtils, as: EU
   require Logger

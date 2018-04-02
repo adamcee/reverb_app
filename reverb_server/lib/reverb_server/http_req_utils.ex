@@ -1,4 +1,10 @@
 defmodule ReverbApp.HTTPRequestUtils do
+  @moduledoc"""
+  Lower-level HTTP request calling functions.
+  Mostly helper wrappers around HTTPotion for builidng request headers
+  and handling errors.
+  """
+
   require Logger
 
   @doc """

@@ -1,4 +1,8 @@
 defmodule ReverbApp.Types do
+  @moduledoc """
+  Types for working with JSON returned by the Reverb API
+  """
+
   alias ReverbApp.Types, as: T
 
   defmodule Href do
