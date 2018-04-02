@@ -1,12 +1,13 @@
-defmodule ReverbApp.ReverbAPI do
+defmodule ReverbServer.ReverbAPI do
   @moduledoc"""
   Functions to interact with the Reverb API.
   These should exactly mirror the API itself and not do anything extra -
-  handle data parsing and manipulation in a module like ReverbAPITools.
+  handle data parsing and manipulation in a module like ReverbAPIHelpers.
   """
 
-  alias ReverbApp.HTTPRequestUtils, as: HTTP
+  alias ReverbServer.HTTPClientHelpers, as: HTTP
   require Logger
+
 
   @host "https://api.reverb.com/api"
 

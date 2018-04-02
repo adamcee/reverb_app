@@ -1,40 +1,13 @@
-defmodule ReverbApp.HTTPRequestUtils do
-  @moduledoc"""
-  Lower-level HTTP request calling functions.
-  These should be used in a separate module to compose the API-calling public functions.
-  Use in conjunction with HTTPEncodingUtils (which should be kept separate).
-  Mostly helper wrappers around HTTPotion for builidng request headers
-  and handling errors.
+defmodule ReverbServer.HTTPClient.HTTPotion do
+  @moduledoc """
+  HTTP client. Mostly wrapper/helper functions around HTTPotion.
+  Should be used by higher-level functions in other modules to
+  compose the actual functions used for HTTP requests to interact with APIs, etc.
 
-  Mainly the lower-level functions should be used to compose public functions for building
-  an API module.
+  Requests can be simulated with the HTTPClient.InMemory module.
   """
 
   require Logger
-  alias ReverbApp.HTTPEncodingUtils, as: EU
-
-  def get_hal_json(endpoint, opts \\ []) do
-    opts = [{:method, :get} | opts]
-    make_hal_json_request(endpoint, opts)
-  end
-
-  def post_hal_json(endpoint, opts \\ []) do
-    opts = [{:method, :post} | opts]
-    opts = [{:body_string, EU.encode_req_json(opts)} | opts]
-    make_hal_json_request(endpoint, opts)
-  end
-
-  defp make_hal_json_request(url, opts) do
-    opts = [{:accept, "application/hal+json"} | opts]
-    opts = [{:content_type, "application/hal+json"} | opts]
-
-    case do_make_request(url, opts) do
-      {:error, :failure} ->
-        Logger.error("Tried call to #{url}, failed.")
-        {:error, :failure}
-      {:ok, {opts, josn}} -> EU.decode_response_json(opts, josn)
-    end
-  end
 
   @doc """
   NOTE: The code calling this function is responsible
@@ -54,7 +27,7 @@ defmodule ReverbApp.HTTPRequestUtils do
   returns a tuple with :ok, and a tuple with the accepts type and undecoded response body.
   On error returns an error tuple.
   """
-  defp do_make_request(url, opts \\ []) do
+  def do_make_request(url, opts \\ []) do
     # get http request opts from map and assign defaults if needed
     method = Keyword.get(opts, :method, :get)
     accept = Keyword.get(opts, :accept, "application/json")

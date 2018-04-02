@@ -1,4 +1,4 @@
-defmodule ReverbApp.HTTPEncodingUtils do
+defmodule ReverbServer.HTTPEncodingUtils do
   @moduledoc"""
   Functions to encode or decode data for http requests/responses.
   This logic is separated out from HTTPRequestUtils so that it can be modified

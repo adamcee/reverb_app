@@ -62,3 +62,6 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 import_config "prod.secret.exs"
+
+# Use actual http client for http requests
+config :reverb_server, http_client: ReverbServer.HTTPClient.HTTPotion

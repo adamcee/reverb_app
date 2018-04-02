@@ -17,3 +17,8 @@ config :reverb_server, ReverbServer.Repo,
   database: "reverb_server_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# IF we want, we can Use mock data via HTTPClient.InMemory to simulate HTTP requests
+# See: http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/
+# config :reverb_server, http_client: ReverbServer.HTTPClient.InMemory
+config :reverb_server, http_client: ReverbServer.HTTPClient.HTTPotion

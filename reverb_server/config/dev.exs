@@ -56,3 +56,6 @@ config :reverb_server, ReverbServer.Repo,
   database: "reverb_server_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Use actual http client for http requests
+config :reverb_server, http_client: ReverbServer.HTTPClient.HTTPotion

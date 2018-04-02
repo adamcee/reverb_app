@@ -1,16 +1,19 @@
-defmodule ReverbApp.Types do
+defmodule ReverbServer.Types do
   @moduledoc """
   Types for working with JSON returned by the Reverb API
   """
 
-  alias ReverbApp.Types, as: T
+  alias ReverbServer.Types, as: T
 
   defmodule Href do
+    @enforce_keys [:href]
     defstruct [:href]
     @type t :: %Href{href: String.t()}
   end
 
   defmodule CategoryLinks do
+    @enforce_keys [:collection_header_image, :follow, :image,
+      :listings, :self, :follow, :web]
     defstruct [:collection_header_image, :follow, :image,
       :listings, :self, :follow, :web]
 
@@ -23,22 +26,13 @@ defmodule ReverbApp.Types do
       follow: %Href{},
       web: %Href{}
     }
+
   end
 
-   defimpl Poison.Encoder, for: Href do
-     def encode(json) do
-       Poison.Encoder.Map.encode(json)
-     end
-   end
-
-   defimpl Poison.Encoder, for: CategoryLinks do
-     def encode(json) do
-       Poison.Encoder.Map.encode(json)
-     end
-   end
-
-
   defmodule Category do
+    @enforce_keys [:_links, :collection_title, :collection_title,
+      :full_name, :listable, :name, :root_slug, :root_uuid,
+      :slug, :uuid]
     defstruct [:_links, :collection_title, :collection_title,
       :full_name, :listable, :name, :root_slug, :root_uuid,
       :slug, :uuid]
@@ -55,11 +49,5 @@ defmodule ReverbApp.Types do
       uuid: String.t(),
     }
   end
-
-   defimpl Poison.Encoder, for: Category do
-     def encode(json) do
-       Poison.Encoder.Map.encode(json)
-     end
-   end
 
  end

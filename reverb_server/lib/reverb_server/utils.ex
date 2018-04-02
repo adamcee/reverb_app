@@ -1,4 +1,4 @@
-defmodule ReverbApp.Utils do
+defmodule ReverbServer.Utils do
   @moduledoc """
   Utility/Helper functions
   """

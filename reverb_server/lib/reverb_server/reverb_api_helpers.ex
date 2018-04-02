@@ -1,10 +1,10 @@
-defmodule ReverbApp.ReverbAPITools do
+defmodule ReverbServer.ReverbAPIHelpers do
   @moduledoc """
   Tools which use the ReverbAPI module and do something with the data,
   or, manipulate said data once it has been retrieved.
   """
 
-  alias ReverbApp.ReverbAPI, as: API
+  alias ReverbServer.ReverbAPI, as: API
   require Logger
 
   @doc """
