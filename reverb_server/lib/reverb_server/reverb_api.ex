@@ -1,4 +1,4 @@
-defmodule ReverbApp.ReverbApi do
+defmodule ReverbApp.ReverbAPI do
   alias ReverbApp.HTTPRequestUtils, as: HTTP
   alias ReverbApp.HTTPEncodingUtils, as: EU
   require Logger
