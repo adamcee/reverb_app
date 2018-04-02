@@ -1,9 +1,8 @@
 defmodule ReverbApp.HTTPEncodingUtils do
   @moduledoc"""
   Functions to encode or decode data for http requests/responses.
-  This logic is separated out from HTTPRequestUtils, and the actuail ReverbAPI
-  so that it can be modified without effecting HTTPEncodingUtils, and so it can
-  be used between projects (unlike, possibly, ReverbAPI).
+  This logic is separated out from HTTPRequestUtils so that it can be modified
+  for various content-types without affecting HTTPEncodingUtils.
   """
 
   require Logger

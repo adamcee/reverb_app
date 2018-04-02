@@ -1,11 +1,41 @@
 defmodule ReverbApp.HTTPRequestUtils do
   @moduledoc"""
   Lower-level HTTP request calling functions.
+  These should be used in a separate module to compose the API-calling public functions.
+  Use in conjunction with HTTPEncodingUtils (which should be kept separate).
   Mostly helper wrappers around HTTPotion for builidng request headers
   and handling errors.
+
+  Mainly the private functions should be used to compose public functions for building
+  an API module; it should rarely be necessary to make a private function public.
   """
 
   require Logger
+  alias ReverbApp.HTTPEncodingUtils, as: EU
+
+  def get_json(endpoint, opts \\ []) do
+    opts = [{:method, :get} | opts]
+    make_json_request(endpoint, opts)
+  end
+
+  def post_json(endpoint, opts \\ []) do
+    opts = [{:method, :post} | opts]
+    opts = [{:body_string, EU.encode_req_json(opts)} | opts]
+    make_json_request(endpoint, opts)
+  end
+
+  defp make_json_request(url, opts) do
+    opts = [{:accept, "application/hal+json"} | opts]
+    opts = [{:accept_version, "3.0"} | opts]
+    opts = [{:content_type, "application/hal+json"} | opts]
+
+    case do_make_request(url, opts) do
+      {:error, :failure} ->
+        Logger.error("Tried call to #{url}, failed.")
+        {:error, :failure}
+      {:ok, {opts, josn}} -> EU.decode_response_json(opts, josn)
+    end
+  end
 
   @doc """
   NOTE: The calling code is responsible for the encoding of the request body
@@ -24,7 +54,7 @@ defmodule ReverbApp.HTTPRequestUtils do
   returns a tuple with :ok, and a tuple with the accepts type and undecoded response body.
   On error returns an error tuple.
   """
-  def do_make_request(url, opts \\ []) do
+  defp do_make_request(url, opts \\ []) do
     # get http request opts from map and assign defaults if needed
     method = Keyword.get(opts, :method, :get)
     accept = Keyword.get(opts, :accept, "application/json")
