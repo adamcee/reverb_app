@@ -3,6 +3,8 @@ defmodule ReverbServer.Utils do
   Utility/Helper functions
   """
 
+  require Logger
+
 #  # from: https://stackoverflow.com/posts/30700541/revisions
 #  defmodule ValidateUri do
 #    def validate_uri(str) do
@@ -38,5 +40,18 @@ defmodule ReverbServer.Utils do
       end
     end
    end
+
+
+  @doc """
+  returns {:ok, json} | {:error, reason}
+  """
+  def get_json_file(path_from_proj_root) do
+    path = Path.join(File.cwd!, path_from_proj_root)
+    with {:ok, body} <- File.read(path),
+         {:ok, json} <- Poison.decode!(body), do: {:ok, json}
+    else
+      {:error, reason} -> {:error, reason}
+      _ -> {:error, :failed_get_json}
+  end
 
 end
