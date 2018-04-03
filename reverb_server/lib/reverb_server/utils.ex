@@ -47,11 +47,11 @@ defmodule ReverbServer.Utils do
   """
   def get_json_file(path_from_proj_root) do
     path = Path.join(File.cwd!, path_from_proj_root)
-    with {:ok, body} <- File.read(path),
-         {:ok, json} <- Poison.decode!(body), do: {:ok, json}
-    else
+    case File.read(path) do
+      {:ok, body} -> {:ok, Poison.decode!(body)}
       {:error, reason} -> {:error, reason}
-      _ -> {:error, :failed_get_json}
+       _ -> {:error, :get_json_file_failure}
+    end
   end
 
 end
