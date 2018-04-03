@@ -34,9 +34,9 @@ defmodule ReverbServer.Types do
                  uuid: String.t(),
                }
 
-    # def init(map_json) do
-    #   cat_links = CategoryLinks.init(map_json["_links"])
-    # end
+     def from_str_map(map_json) do
+       cat_links = CategoryLinks.from_str_map(map_json["_links"])
+     end
   end
 
   defmodule CategoryLinks do
@@ -55,12 +55,16 @@ defmodule ReverbServer.Types do
       web: String.t,
     }
 
-    def init(map_json) do
+    def from_str_map(map_json) do
+      # TODO: Convert map_json to keylist, then convert as below, then turn back to map.
       # Convert like {"follow": "href" => "http://google.com"}
       # to  {"follow": "http://google.com"}, etc
+
       map_json
-      |> Enum.map((fn container -> container["href"] end).())
-      |> (fn parsed -> struct(CategoryLinks, parsed) end).()
+      |> Map.to_list
+      |> Enum.map(fn ({key, {"href", href_val}}) -> {String.to_atom(key), href_val} end)
+      |> Enum.into(%{})
+      |> (fn parsed_map -> struct(CategoryLinks, parsed_map) end).()
     end
   end
 
