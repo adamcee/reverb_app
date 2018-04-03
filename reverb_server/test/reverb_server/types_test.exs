@@ -64,7 +64,7 @@ defmodule ReverbServer.TypesTest do
   defmodule CategoryTest do
     use ExUnit.Case, async: true
     test "assert Category.from_str_map creates a Category struct from json" do
-      # Get str map of json then pattern match to get `_links` from the first category in the `categories` list
+      # Get str map of json then pattern match to get the first category in the `categories` list
       {:ok, json}= U.get_json_file("mock_data/mock_categories.json")
       %{"categories" => [category | _cat_list_tail ]} = json
 
@@ -72,7 +72,17 @@ defmodule ReverbServer.TypesTest do
         _correct_struct = %T.Category{} -> assert true
         _ -> assert false
       end
+    end
+  end
 
+  defmodule CategoriesFlatTest do
+    use ExUnit.Case, async: true
+    test "assert CategoriesFlat.from_str_map creates a CategoriesFlatResponse struct from json" do
+      {:ok, json} = U.get_json_file("mock_data/mock_categories.json")
+      case T.CategoriesFlat.from_str_map(json) do
+        _correct_struct = %T.CategoriesFlat{} -> assert true
+        _ -> assert false
+      end
     end
   end
 

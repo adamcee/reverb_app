@@ -5,12 +5,19 @@ defmodule ReverbServer.Types do
 
   alias ReverbServer.Types, as: T
 
-  defmodule CategoriesFlatResponseBody do
+  @doc """
+  struct for the complete json response body returned by /categories/flat
+  """
+  defmodule CategoriesFlat do
     @enforce_keys [:categories]
     defstruct @enforce_keys
-    @type t :: %CategoriesFlatResponseBody {
+    @type t :: %CategoriesFlat{
                  categories: list(Category)
                }
+    def from_str_map(map_json) do
+      cats = Enum.map(map_json["categories"], &T.Category.from_str_map/1)
+      struct(CategoriesFlat, %{categories: cats})
+    end
   end
 
   defmodule Category do
