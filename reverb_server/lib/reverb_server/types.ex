@@ -73,6 +73,49 @@ defmodule ReverbServer.Types do
 
   end
 
+
+  @doc """
+  Struct to hold the complete response from /listings/all
+  """
+  defmodule ListingsAll do
+    @enforce_keys [:_links, :current_page, :humanized_params, :listings,
+      :per_page, :ships_to, :total, :total_pages]
+    defstruct @enforce_keys
+  end
+
+  # defmodule Listing do
+  # end
+
+  # defmodule ListingLinks do
+  #   @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
+  #     :web]
+  #   defstruct ListingLinks
+  # end
+
+  defmodule Link do
+    @keys [:href, :method]
+    @enforce_keys :href
+    defstruct @keys
+
+    @type t:: %Link {
+      href: String.t,
+      # :get, :post, :put, :delete
+      method: atom()
+    }
+
+    def from_str_map(map_json) do
+      link_map = T.str_keys_to_atoms(map_json)
+      link_parsed = case Map.has_key?(link_map, "method") do
+        true ->
+          val = link_map["method"]
+          Map.put(link_map, "method", String.to_atom(val))
+        false -> link_map
+      end
+      struct(T.Link, link_parsed)
+    end
+
+  end
+
   @doc """
   str_map %{} map with all string keys
   Returns the map, values unchanged, with all keys as atoms
@@ -89,9 +132,12 @@ defmodule ReverbServer.Types do
   like `{"follow": %{"href" => "http://google.com"}}`
   to a Keylist w/an atom key `{:follow, "http://google.com"}`
   """
-  def flatten_href({key, %{"href" => href_val}}) do
+  def flatten_href({key, %{"href" => href_val}}) when is_binary(key) do
     {String.to_atom(key), href_val}
   end
+
+
+
 
   #@doc """
   #Convert a map with string keys to a struct
@@ -112,4 +158,4 @@ defmodule ReverbServer.Types do
   #      {:ok, v} -> %{acc | k => v}
   #      :error -> acc
   #    end
-  end
+end

@@ -16,10 +16,17 @@ defmodule ReverbServer.TypesTest do
         _ -> assert false
       end
     end
+  end
 
-    test "assert str_keys_to_atom converts the string keys of a map to atoms" do
-      case T.str_keys_to_atoms(%{"alpha" => "alpha", "beta" => "beta"}) do
-        %{alpha: "alpha", beta: "beta"} -> assert true
+  defmodule LinkTest do
+    use ExUnit.Case, async: true
+    test "assert Link.from_str_map creates a Link structure from json" do
+      # get map of json from string, like we would from an http response
+      {:ok, json} = Poison.encode(%{href: "http://google.com"})
+      json = Poison.decode!(json)
+
+      case T.Link.from_str_map(json) do
+        _correct = %T.Link{} -> assert true
         _ -> assert false
       end
     end
