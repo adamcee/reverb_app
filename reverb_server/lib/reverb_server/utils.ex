@@ -46,24 +46,5 @@ defmodule ReverbServer.Utils do
   #end
   #
   #
-  # @doc """
-  # Convert a map with string keys to a struct
-  # from: https://groups.google.com/forum/#!msg/elixir-lang-talk/6geXOLUeIpI/L9einu4EEAAJ
-
-  #  kind: The struct to create
-  #  attr: A map with string keys
-
-  #  Returns a struct of type kind
-  #  NOTE: Be careful using this with structs with nested structures!!
-  # """
-  # def to_struct(kind, attrs) do
-  #    struct = struct(kind)
-  #    Enum.reduce Map.to_list(struct), struct, fn {k, _}, acc ->
-  #      case Map.fetch(attrs, Atom.to_string(k)) do
-  #        {:ok, v} -> %{acc | k => v}
-  #        :error -> acc
-  #      end
-  #    end
-  #   end
 
 end

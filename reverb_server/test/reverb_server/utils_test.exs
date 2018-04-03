@@ -1,10 +1,11 @@
 defmodule ReverbServer.UtilsTest do
   @moduledoc false
+
+  alias ReverbServer.Utils, as: U
   ExUnit.start()
 
   defmodule GetFileTest do
     use ExUnit.Case, async: true
-    alias ReverbServer.Utils, as: U
 
     test "ReverbServer.Utils.get_file returns error for a nonexistent file" do
       case U.get_json_file("mock_data/this_definitely_does_not_exist.json") do
