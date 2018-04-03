@@ -30,6 +30,17 @@ defmodule ReverbServer.TypesTest do
         _ -> assert false
       end
     end
+
+    test "assert Link.from_str_map converts method val to atom - \"get\" to :get" do
+      # get map of json from string, like we would from an http response
+      {:ok, json} = Poison.encode(%{href: "http://google.com", method: "get"})
+      json = Poison.decode!(json)
+
+      case T.Link.from_str_map(json) do
+       %T.Link{href: "http://google.com", method: :get} -> assert true
+        # _ -> assert false
+      end
+    end
   end
 
   defmodule CategoryLinksTest do

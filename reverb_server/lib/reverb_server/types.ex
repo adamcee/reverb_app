@@ -74,22 +74,28 @@ defmodule ReverbServer.Types do
   end
 
 
-  @doc """
-  Struct to hold the complete response from /listings/all
-  """
-  defmodule ListingsAll do
-    @enforce_keys [:_links, :current_page, :humanized_params, :listings,
-      :per_page, :ships_to, :total, :total_pages]
-    defstruct @enforce_keys
-  end
-
-  # defmodule Listing do
+  # @doc """
+  # Struct to hold the complete response from /listings/all
+  # """
+  # defmodule ListingsAll do
+  #   @enforce_keys [:_links, :current_page, :humanized_params, :listings,
+  #     :per_page, :ships_to, :total, :total_pages]
+  #   defstruct @enforce_keys
   # end
 
-  # defmodule ListingLinks do
-  #   @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
-  #     :web]
-  #   defstruct ListingLinks
+  # # defmodule Listing do
+  # # end
+
+  #  defmodule ListingLinks do
+  #    @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
+  #      :web]
+  #    defstruct ListingLinks
+
+  #    def from_str_map(map_json) do
+  #      map_json
+  #      |> Enum.map(&T.Link.from_str_map/1)
+  #     |> Enum.map(&T.str_keys_to_atoms/1)
+  #   end
   # end
 
   defmodule Link do
@@ -105,13 +111,13 @@ defmodule ReverbServer.Types do
 
     def from_str_map(map_json) do
       link_map = T.str_keys_to_atoms(map_json)
-      link_parsed = case Map.has_key?(link_map, "method") do
+      case Map.has_key?(link_map, :method) do
         true ->
-          val = link_map["method"]
-          Map.put(link_map, "method", String.to_atom(val))
-        false -> link_map
+          val = Map.get(link_map, :method)
+          parsed = Map.put(link_map, :method, String.to_atom(val))
+          struct(T.Link, parsed)
+        false -> struct(T.Link, link_map)
       end
-      struct(T.Link, link_parsed)
     end
 
   end
