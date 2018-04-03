@@ -86,24 +86,36 @@ defmodule ReverbServer.Types do
   # # defmodule Listing do
   # # end
 
-  #  defmodule ListingLinks do
-  #    @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
-  #      :web]
-  #    defstruct ListingLinks
+  defmodule ListingLinks do
+    @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
+      :web]
+    defstruct @enforce_keys
 
-  #    def from_str_map(map_json) do
-  #      map_json
-  #      |> Enum.map(&T.Link.from_str_map/1)
-  #     |> Enum.map(&T.str_keys_to_atoms/1)
-  #   end
-  # end
+    @type t ::  %ListingLinks{
+                  cart: T.Link,
+                  edit: T.Link,
+                  make_offer: T.Link,
+                  photo: T.Link,
+                  self: T.Link,
+                  watchlist: T.Link,
+                  web: T.Link,
+                }
+
+    def from_str_map(map_json) do
+      T.str_keys_to_atoms(map_json)
+      |> Map.to_list
+      |> Enum.map(fn({key, link}) -> {key, T.Link.from_str_map(link)} end)
+      |> Enum.into(%{})
+      |> (fn parsed_map -> struct(ListingLinks, parsed_map) end).()
+    end
+  end
 
   defmodule Link do
     @keys [:href, :method]
     @enforce_keys :href
     defstruct @keys
 
-    @type t:: %Link {
+    @type t :: %Link {
       href: String.t,
       # :get, :post, :put, :delete
       method: atom()
