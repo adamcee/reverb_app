@@ -1,4 +1,5 @@
 defmodule ReverbServer.UtilsTest do
+  @moduledoc false
   ExUnit.start()
 
   defmodule GetFileTest do
@@ -36,16 +37,6 @@ defmodule ReverbServer.UtilsTest do
       end
     end
 
-    test "ReverbServer.Utils.get_json_file_throws_err correctly retrieves and parses a .json file." do
-      case U.get_json_file("mock_data/mock_categories.json") do
-        {:ok, json} ->
-          case Map.has_key?(json, "categories") do
-            true -> assert true
-            false -> assert false
-          end
-        _ -> assert false
-      end
-    end
   end
 
 end

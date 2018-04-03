@@ -4,21 +4,10 @@ defmodule ReverbServer.Utils do
   """
 
   require Logger
-
-
-  @doc """
-  Returns `%{}`
-  Throws err if fails. Useful when getting json files for tests
-  """
-  def get_json_file_throws_err(path_from_proj_root) do
-    path = Path.join(File.cwd!, path_from_proj_root)
-    case File.read!(path) do
-      body -> {:ok, Poison.decode!(body)}
-      _ -> {:error, :failure}
-    end
-  end
+  alias ReverbServer.Utils, as: U
 
   @doc """
+  Get JSON file and return a map of the JSON
   Returns `{:ok, %{}}` | `{:error, reason}`
   """
   def get_json_file(path_from_proj_root) do
