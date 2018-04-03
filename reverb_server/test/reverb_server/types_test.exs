@@ -56,6 +56,16 @@ defmodule ReverbServer.TypesTest do
     end
   end
 
+  # defmodule ListingsAllTest do
+  #   use ExUnit.Case, async: true
+  #   test "assert ListingsAll.from_str_map makes the struct from json" do
+  #     {:ok, json} = U.get_json_file("mock_data/mock_listings_all.json")
+  #     case T.ListingsAll.from_str_map(json) do
+  #       _correct = %T.ListingsAll{} -> assert true
+  #     end
+  #   end
+  # end
+
   defmodule CategoryLinksTest do
     use ExUnit.Case, async: true
     test "assert CategoryLinks.from_str_map creates a CategoryLinks struct from json" do

@@ -81,10 +81,28 @@ defmodule ReverbServer.Types do
   #   @enforce_keys [:_links, :current_page, :humanized_params, :listings,
   #     :per_page, :ships_to, :total, :total_pages]
   #   defstruct @enforce_keys
+
+  #   # This could be done more cleanly, but is straightforward and it works.
+  #   def from_str_map(map_json) do
+  #     parsed = T.str_keys_to_atoms(map_json)
+
+  #     links = parsed[:_links]
+  #     links = T.str_keys_to_atoms(links)
+  #     links = Map.to_list(links)
+  #     |> Enum.map(fn({key, link}) -> {key, T.Link.from_str_map(link)} end)
+  #     |> Enum.into(%{})
+  #     parsed = Map.put(parsed, :_links, links)
+
+  #     listings = parsed[:listings]
+  #     listings = Enum.map(listings, &T.Listing.from_str_map/1)
+  #     parsed = Map.put(parsed, :listings, listings)
+  #    struct(ListingsAll, parsed)
+
+  #  end
   # end
 
-  # # defmodule Listing do
-  # # end
+  # defmodule Listing do
+  # end
 
   defmodule ListingLinks do
     @enforce_keys [:cart, :edit, :make_offer, :photo, :self, :watchlist,
@@ -110,6 +128,13 @@ defmodule ReverbServer.Types do
     end
   end
 
+  @doc """
+  Use for all sorts of structs. Container for hal-jason/HATEOAS
+  style info. Generally all data returned from the Reverb.com API
+  seems to include api actions related to the item to perform
+  (buy, get detail info, get picture, etc).
+  Each "link" will have an href, maybe an http method, etc.
+  """
   defmodule Link do
     @keys [:href, :method]
     @enforce_keys :href
@@ -154,26 +179,4 @@ defmodule ReverbServer.Types do
     {String.to_atom(key), href_val}
   end
 
-
-
-
-  #@doc """
-  #Convert a map with string keys to a struct
-  #from: https://groups.google.com/forum/#!msg/elixir-lang-talk/6geXOLUeIpI/L9einu4EEAAJ
-
-  # kind: The struct to create
-  # attr: A map with string keys
-
-  # Returns a struct of type kind
-  # NOTE: I believe the struct must have default values for all enforced_keys for this to work.
-  # NOTE: This can handle attr maps with more keys than the struct contains
-  # NOTE: This will not do any conversion on nested maps - nested vals will be passed as-is!!!
-  #"""
-  #def to_struct(kind, attrs) do
-  #  struct = struct(kind)
-  #  Enum.reduce Map.to_list(struct), struct, fn {k, _}, acc ->
-  #    case Map.fetch(attrs, Atom.to_string(k)) do
-  #      {:ok, v} -> %{acc | k => v}
-  #      :error -> acc
-  #    end
 end
