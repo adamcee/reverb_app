@@ -1,7 +1,7 @@
-defmodule ReverbServer.ReverbTypesTest do
+defmodule ReverbServer.UtilsTest do
   ExUnit.start()
 
-  defmodule ReverbServerUtilsTest do
+  defmodule GetJsonFileTest do
     use ExUnit.Case, async: true
     alias ReverbServer.Utils, as: U
 
