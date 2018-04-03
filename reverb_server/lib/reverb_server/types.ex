@@ -19,7 +19,7 @@ defmodule ReverbServer.Types do
     defstruct @enforce_keys
 
     @type t :: %Category{
-                 _links: CategoryLinks,
+                 _links: T.CategoryLinks,
                  collection_title: String.t(),
                  full_name: String.t(),
                  listable: boolean(),
@@ -31,7 +31,7 @@ defmodule ReverbServer.Types do
                }
 
      def from_str_map(map_json) do
-       cat_links = CategoryLinks.from_str_map(map_json["_links"])
+       cat_links = T.CategoryLinks.from_str_map(map_json["_links"])
        updated = Map.put(map_json, "_links", cat_links)
        parsed_map = T.str_keys_to_atoms(updated)
        struct(Category, parsed_map)

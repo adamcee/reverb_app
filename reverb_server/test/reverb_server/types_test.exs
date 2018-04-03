@@ -4,11 +4,11 @@ defmodule ReverbServer.TypesTest do
   require Logger
   alias ReverbServer.Types, as: T
   alias ReverbServer.Utils, as: U
+  alias ReverbServer.TypesTest, as: S
   ExUnit.start()
 
   defmodule HelpersTest do
     use ExUnit.Case, async: true
-
     test "assert flatten_href returns an atom map containing the link value" do
       mock = {"google", %{"href" => "http://google.com"}}
       case T.flatten_href(mock) do
@@ -27,7 +27,6 @@ defmodule ReverbServer.TypesTest do
 
   defmodule CategoryLinksTest do
     use ExUnit.Case, async: true
-
     test "assert CategoryLinks.from_str_map creates a CategoryLinks struct from json" do
       ##########
       # To make life easier if we need to debug this, this is what the map should like like,
@@ -60,18 +59,21 @@ defmodule ReverbServer.TypesTest do
         _ -> assert false
       end
     end
-
   end
 
-  @doc """
-  Helper to consistently return the same value for the `_links` prop of the json
-  for the first category in mock_category.json
-  """
-  defp get_cat_links_json do
-    # Get str map of json then pattern match to get `_links` from the first category in the `categories` list
-    {:ok, json}= U.get_json_file("mock_data/mock_categories.json")
-    %{"categories" => [%{"_links" => cat_links} | _cat_list_tail ]} = json
-    cat_links
+  defmodule CategoryTest do
+    use ExUnit.Case, async: true
+    test "assert Category.from_str_map creates a Category struct from json" do
+      # Get str map of json then pattern match to get `_links` from the first category in the `categories` list
+      {:ok, json}= U.get_json_file("mock_data/mock_categories.json")
+      %{"categories" => [category | _cat_list_tail ]} = json
+
+      case T.Category.from_str_map(category) do
+        _correct_struct = %T.Category{} -> assert true
+        _ -> assert false
+      end
+
+    end
   end
 
 end
