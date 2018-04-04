@@ -9,11 +9,16 @@ defmodule ReverbServer.ListingTypes do
   alias ReverbServer.ShippingTypes, as: ST
 
   defmodule Listing do
-    @enforce_keys [:_links, :auction, :categories, :created_at, :description,
-                   :finish, :has_inventory, :id, :inventory, :listing_currency, :make, :mode, :offers_enabled, :photos, :price, :published_at, :shipping, :shop, :shop_id, :shop_name, :state, :title, :year
-                   :has_inventory, :id]
+    @enforce_keys [:_links, :auction, :categories, :created_at, :description, :finish, :has_inventory,
+      :id, :inventory, :listing_currency, :make, :mode, :offers_enabled, :photos, :price, :published_at,
+      :shipping, :shop, :shop_id, :shop_name, :state, :title, :year, :has_inventory, :id]
 
     defstruct @enforce_keys
+
+    @struct_fields [{:_links, T.ListingLinks}, {:categories, T.ListingCategory}, {:condition, T.Condition},
+      {:photos, T.PhotoLinks}, {:price, T.Price}, {:shop, T.Shop}, {:state, T.State}]
+
+    @list_fields [:photos, :categories]
 
     @type t :: %Listing{
       _links: T.ListingLinks,
@@ -42,14 +47,11 @@ defmodule ReverbServer.ListingTypes do
       year: String.t
     }
 
-    @struct_fields [{:_links, T.ListingLinks}, {:categories, T.ListingCategory}, {:condition, T.Condition}, {:photos, T.PhotoLinks}, {:price, T.Price}, {:shop, T.Shop}, {::state, T.State}]
-
-    @list_fields[::photos, :categories]
 
     def from_str_map = (%{} = map_json) do
       parsed = U.str_keys_to_atoms(map_json)
       |> Map.to_list
-      |> Enum.map((fn({key, val} ->
+      |> Enum.map((fn ({key, val}) ->
         # if field is some struct convert its value to said struct.
         # if field is list of some struct convert list els to said struct.
         # otherwise return the unchanged {key, val} tuple.
@@ -156,8 +158,6 @@ defmodule ReverbServer.ListingTypes do
       parsed = U.str_keys_to_atoms(map_json)
       struct(Price, parsed)
     end
-
-    end
   end
 
   defmodule Condition do
@@ -258,13 +258,10 @@ defmodule ReverbServer.ListingTypes do
   convert the value of that key to a given struct.
   Return the updated map.
   """
-  def build_struct_update_map(%{} = atom_key_map, key, struct_type)
-    when is_atom(key) do
-
+  def build_struct_update_map(%{} = atom_key_map, key, struct_type) when is_atom(key) do
     val = atom_key_map[key]
     val_as_struct = struct(struct_type, val)
     Map.put(atom_key_map, key, val_as_struct)
   end
-
 
 end

@@ -45,7 +45,6 @@ defmodule ReverbServer.ListingsAllTypes do
                  thumbnail: Link.Link,
                  large_crop: Link.Link,
                  small_crop: Link.Link
-
                }
 
     def from_str_map(map_json) do
@@ -54,7 +53,7 @@ defmodule ReverbServer.ListingsAllTypes do
         full: Link.Link.from_str_map(parsed[:full]),
         thumbnail: Link.Link.from_str_map(parsed[:thumbnail]),
         large_crop: Link.Link.from_str_map(parsed[:large_crop]),
-        small_crop: Link.Link.from_str_map(parsed[:small_crop]),
+        small_crop: Link.Link.from_str_map(parsed[:small_crop])
       })
     end
   end
@@ -77,50 +76,46 @@ defmodule ReverbServer.ListingsAllTypes do
       parsed = U.str_keys_to_atoms(map_json)
       struct(Price, parsed)
     end
-
-    end
   end
 
   defmodule Listing do
-    @enforce_keys [:_links, :auction, :created_at, :description, :finish
-    :has_inventory]
+    @enforce_keys [:_links, :auction, :created_at, :description, :finish, :has_inventory]
     defstruct @enforce_keys
-    defstruct @enforce_keys
+
     @type t :: %Listing{
-                 _links: T.ListingLinks,
-                 aution: boolean,
-                 categories: list(T.ListingCategory),
-                 condition: T.Condition,
-                 created_at: String.t,
-                 description: String.t,
-                 finish: String.t,
-                 has_inventory: boolean,
-                                id: integer,
-                                inventory: integer,
-                                           listing_currency: String.t,
-                   make: String.t,
-                   mode: String.t,
-                               offers_enabled: boolean,
-                               photos: list(T.PhotoLinks),
-                               price: T.Price,
-                               published_at: String.t,
-                     "shop": {
-                     "preferred_seller": false,
-                                       "slug": "japanvintagefx"
-                                                              },
-                                                              "shop_id": 346799,
-                     "shop_name": "JapanVintageFX",
-                     "state": {
-                     "description": "Live",
-                                  "slug": "live"
-                                          },
-                                          "title": "Fuchs Plush Jersey Thunder (EQ/Boost/Tone Shaper) 2010s Purple",
-                                                 "year": "2010s"
-                                                         },
+       _links: T.ListingLinks,
+        aution: boolean,
+        categories: list(T.ListingCategory),
+        condition: T.Condition,
+        created_at: String.t,
+        description: String.t,
+        finish: String.t,
+        has_inventory: boolean,
+        id: integer,
+        inventory: integer,
+        listing_currency: String.t,
+        make: String.t,
+        mode: String.t,
+        offers_enabled: boolean,
+        photos: list(T.PhotoLinks),
+        price: T.Price,
+        published_at: String.t
+                            }
+    end
 
-
-               }
-  end
+#                     "shop": {
+#                     "preferred_seller": false,
+#                                       "slug": "japanvintagefx"
+#                                                              },
+#                                                              "shop_id": 346799,
+#                     "shop_name": "JapanVintageFX",
+#                     "state": {
+#                     "description": "Live",
+#                                  "slug": "live"
+#                                          },
+#                                          "title": "Fuchs Plush Jersey Thunder (EQ/Boost/Tone Shaper) 2010s Purple",
+#                                                 "year": "2010s"
+#                                                         },
 
   defmodule Condition do
     @enforce_keys [:display_name, slug, :uuid]

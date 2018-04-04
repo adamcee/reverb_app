@@ -11,11 +11,10 @@ defmodule ReverbServer.ShippingTypes do
 
 
   defmodule Shipping do
-    @enforce_keys[:free_expedited_shipping, :initial_offer_rate, :local,
-                  :rates]
+    @enforce_keys [:free_expedited_shipping, :initial_offer_rate, :local, :rates]
     defstruct @enforce_keys
     @type t :: %Shipping{
-      free_expedited_shipping: boolean
+      free_expedited_shipping: boolean,
       initial_offer_rate: T.InitialOfferRate,
       local: boolean,
       rates: list(T.RateContainer),
@@ -76,22 +75,22 @@ defmodule ReverbServer.ShippingTypes do
   defmodule RateFields do
     @enforce_keys [:amount, :amount_cents, :currency, :display, :symbol]
     defstruct @enforce_keys
-    type t :: %RateFields{
-      amount: String.t,
-      amount_cents: integer,
-      currency: String.t,
-      display: String.t,
-      symbol String.t
-    }
+    # @type t:: %RateFields{
+    #   amount: String.t,
+    #   amount_cents: integer,
+    #   currency: String.t,
+    #   display: String.t,
+    #   symbol String.t
+    # }
 
     def from_str_map(map_json) do
       parsed = U.str_keys_to_atoms(map_json)
       struct(RateFields, %{
-        amount: parsed[:amount]
+        amount: parsed[:amount],
         amount_cents: parsed[:amount_cents],
         currency: parsed[:currency],
         display: parsed[:display],
-        symbol parsed[:symbol]
+        symbol: parsed[:symbol]
       })
     end
   end
