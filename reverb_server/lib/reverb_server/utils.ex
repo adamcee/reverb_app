@@ -41,6 +41,17 @@ defmodule ReverbServer.Utils do
     |> Enum.into(%{})
   end
 
+  def get_listings_all_mock_data() do
+    {:ok, json} = U.get_json_file("mock_data/mock_listings_all.json")
+    %{"listings" => listings} = json
+    %{"listings" => [listing | _listings_list_tail]} = json
+    %{"shipping" => shipping} = listing
+    %{"initial_offer_rate" => initial_offer_rate} = shipping
+    %{"rate" => rate} = initial_offer_rate
+    %{"display" => rate_fields} = rate
+    {listings, listing, shipping, initial_offer_rate, rate, rate_fields}
+  end
+
 
   #  # from: https://stackoverflow.com/posts/30700541/revisions
   #  defmodule ValidateUri do

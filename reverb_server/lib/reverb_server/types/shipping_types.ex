@@ -75,13 +75,13 @@ defmodule ReverbServer.ShippingTypes do
   defmodule RateFields do
     @enforce_keys [:amount, :amount_cents, :currency, :display, :symbol]
     defstruct @enforce_keys
-    # @type t:: %RateFields{
-    #   amount: String.t,
-    #   amount_cents: integer,
-    #   currency: String.t,
-    #   display: String.t,
-    #   symbol String.t
-    # }
+    @type t:: %RateFields{
+      amount: String.t,
+      amount_cents: integer,
+      currency: String.t,
+      display: String.t,
+      symbol: String.t
+    }
 
     def from_str_map(map_json) do
       parsed = U.str_keys_to_atoms(map_json)
