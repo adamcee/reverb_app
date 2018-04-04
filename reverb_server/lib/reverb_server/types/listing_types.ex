@@ -9,7 +9,7 @@ defmodule ReverbServer.ListingTypes do
   alias ReverbServer.ShippingTypes, as: ST
 
   defmodule Listing do
-    @enforce_keys [:_links, :auction, :categories, :created_at, :description, :finish, :has_inventory,
+    @enforce_keys [:_links, :auction, :categories, :condition, :created_at, :description, :finish, :has_inventory,
       :id, :inventory, :listing_currency, :make, :mode, :offers_enabled, :photos, :price, :published_at,
       :shipping, :shop, :shop_id, :shop_name, :state, :title, :year, :has_inventory, :id]
 
@@ -22,7 +22,7 @@ defmodule ReverbServer.ListingTypes do
 
     @type t :: %Listing{
       _links: T.ListingLinks,
-      aution: boolean,
+      auction: boolean,
       categories: list(T.ListingCategory),
       condition: T.Condition,
       created_at: String.t,
@@ -111,7 +111,7 @@ defmodule ReverbServer.ListingTypes do
 
     # convert all the items in a list to a given struct.
     # can assume each item in the list is the right kind of map.
-    defp list_items_to_structs(list() = list, struct_type) do
+    defp list_items_to_structs(list, struct_type) do
       Enum.map(list, fn (%{} = i) -> struct(struct_type, i) end)
     end
 
@@ -144,7 +144,7 @@ defmodule ReverbServer.ListingTypes do
     @enforce_keys [:amount, :amount_cents, :currency, :display,
                          :symbol, :tax_included]
     defstruct @enforce_keys
-    type t :: %Price {
+    @type t :: %Price {
                 amount: String.t,
                 amount_cents: integer,
                 currency: String.t,
@@ -161,7 +161,7 @@ defmodule ReverbServer.ListingTypes do
   end
 
   defmodule Condition do
-    @enforce_keys [:display_name, slug, :uuid]
+    @enforce_keys [:display_name, :slug, :uuid]
     defstruct @enforce_keys
     @type t :: %Condition{
                  display_name: String.t,

@@ -29,7 +29,7 @@ defmodule ReverbServer.ShippingTypes do
   defmodule RateContainer do
     @enforce_keys [:rate, :region_code]
     defstruct @enforce_keys
-    type t :: %RateContainer{
+    @type t :: %RateContainer{
       rate: T.RateFields,
       region_code: String.t
     }
@@ -44,7 +44,7 @@ defmodule ReverbServer.ShippingTypes do
   defmodule InitialOfferRate do
     @enforce_keys [:rate, :region_code]
     defstruct @enforce_keys
-    type t :: %InitialOfferRate{
+    @type t :: %InitialOfferRate{
       rate: T.IORate,
       region_code: String.t
     }
@@ -59,7 +59,7 @@ defmodule ReverbServer.ShippingTypes do
   defmodule IORate do
     @enforce_keys [:display, :original]
     defstruct @enforce_keys
-    type t :: %IORate{
+    @type t :: %IORate{
       display: T.RateFields,
       original: T.RateFields
     }

@@ -6,15 +6,16 @@ defmodule ReverbServer.LinkTypes do
   alias ReverbServer.LinkTypes, as: T
   alias ReverbServer.Utils, as: U
 
-  @doc """
-  Use for all sorts of structs for handling response data from
-  the Reverb API. Container for hal-jason/HATEOAS
-  style info. Generally all data returned from the Reverb.com API
-  seems to include api actions related to the item to perform
-  (buy, get detail info, get picture, etc).
-  Each "link" will have an href, maybe an http method, etc.
-  """
   defmodule Link do
+    @moduledoc """
+    Use for all sorts of structs for handling response data from
+    the Reverb API. Container for hal-jason/HATEOAS
+    style info. Generally all data returned from the Reverb.com API
+    seems to include api actions related to the item to perform
+    (buy, get detail info, get picture, etc).
+    Each "link" will have an href, maybe an http method, etc.
+    """
+
     @keys [:href, :method]
     @enforce_keys :href
     defstruct @keys
