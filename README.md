@@ -1,8 +1,8 @@
 # App to interact with Reverb.com API
 
 ## Installation
-1. [Install Elixir](https://elixir-lang.org/install.html) (instructions in the link) if you do not have it. There is an `install_elixir.sh` script for Linux, if you wish. You should be able to use Homebrew with OS X. 
-2. Install  and set up [Postgresql](https://www.postgresql.org/) (instructions in the link) if you do not have it. A great simple option for OS X is (http://postgresapp.com/). There is an `install_postgres_ubuntu.sh` install script for *Ubuntu Linux only* if you wish. There is also an `setup_postgres.sh` script, which should work for all Linux distros and for OS X, if you wish.
+1. [Install Elixir (instructions in this link)](https://elixir-lang.org/install.html)  if you do not have it. There is an `install_elixir.sh` script for Linux, if you wish. You should be able to use Homebrew with OS X. 
+2. Install  and set up [Postgresql (instructions in this link)](https://www.postgresql.org/)  if you do not have it. A great simple option for OS X is (http://postgresapp.com/). There is an `install_postgres_ubuntu.sh` install script for *Ubuntu Linux only* if you wish. There is also an `setup_postgres.sh` script, which should work for all Linux distros and for OS X, if you wish.
 3. `$ cd reverb_server && mix deps.get`. Be sure your Postgres service is running (with Postgresapp you should click on the app icon to start it). 
 
 ## To run the server
