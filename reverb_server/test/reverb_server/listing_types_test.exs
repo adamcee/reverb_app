@@ -68,6 +68,21 @@ defmodule ReverbServer.ListingTypesTest do
       end
     end
 
+    test "assert PhotoLinksContainer struct builds from json" do
+      {_listings, listing, _shipping, _initial_offer_rate, _rate, _rate_fields} = U.get_listings_all_mock_data()
+      %{"photos" => [photo_links_container | _tail]} = listing
+      case T.PhotoLinksContainer.from_str_map(photo_links_container) do
+        _correct = %T.PhotoLinksContainer{} -> assert true
+      end
+    end
+
+    test "assert Listing struct builds from json" do
+      {_listings, listing, _shipping, _initial_offer_rate, _rate, _rate_fields} = U.get_listings_all_mock_data()
+      case T.Listing.from_str_map(listing) do
+        _correct = %T.Listing{} -> assert true
+      end
+    end
+
   end
 
 end

@@ -66,35 +66,9 @@ defmodule ReverbServer.ListingTypes do
           end).())
 
       struct(Listing, parsed)
-
-      # parsed = T.build_struct_update_map(parsed, :_links, T.ListingLinks)
-      # parsed = T.build_struct_update_map(parsed, :categories, T.ListingCategory)
-
-      # categories = struct(T.ListingCategory, parsed[:categories])
-
-      # condition: T.Condition,
-      # created_at: String.t,
-      # description: String.t,
-      # finish: String.t,
-      # has_inventory: boolean,
-      # id: integer,
-      # inventory: integer,
-      # listing_currency: String.t,
-      # make: String.t,
-      # mode: String.t,
-      # offers_enabled: boolean,
-      # photos: list(T.PhotoLinks),
-      # price: T.Price,
-      # published_at: String.t,
-      # shipping: ST.Shipping,
-      # shop: T.Shop,
-      # shop_id: integer,
-      # shop_name: String.t,
-      # state:  T.State,
-      # title: String.t,
-      # year: String.t
     end
 
+      ## HELPER FUNCTIONS FOR Listing.from_str_map ##
     # check if field/key of our struct contains a struct
     # return {:my_key, my_struct_type} | nil
     defp get_type_if_is_struct_field(a_key) do
@@ -116,6 +90,34 @@ defmodule ReverbServer.ListingTypes do
     end
 
   end
+
+  # parsed = T.build_struct_update_map(parsed, :_links, T.ListingLinks)
+  # parsed = T.build_struct_update_map(parsed, :categories, T.ListingCategory)
+
+  # categories = struct(T.ListingCategory, parsed[:categories])
+
+  # condition: T.Condition,
+  # created_at: String.t,
+  # description: String.t,
+  # finish: String.t,
+  # has_inventory: boolean,
+  # id: integer,
+  # inventory: integer,
+  # listing_currency: String.t,
+  # make: String.t,
+  # mode: String.t,
+  # offers_enabled: boolean,
+  # photos: list(T.PhotoLinks),
+  # price: T.Price,
+  # published_at: String.t,
+  # shipping: ST.Shipping,
+  # shop: T.Shop,
+  # shop_id: integer,
+  # shop_name: String.t,
+  # state:  T.State,
+  # title: String.t,
+  # year: String.t
+
 
   defmodule PhotoLinksContainer do
     @enforce_keys [:_links]
