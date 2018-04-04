@@ -16,6 +16,6 @@
 2. `$ iex -S mix phx.server`. This will open up an REPL which allows you to interact with the running application. *Perform all of the following commands in this REPL*. These commands are function calls on modules in the application.
 3. `> alias ReverbServer, as: S`
 4. `> S.ReverbAPI.get_listings_all` -- hits the `/listings/all` endpoint. 
-5. `> S.ReverbAPI.get_listings_all({per_page: 10})` to return ten results per page.
+5. `> S.ReverbAPI.get_listings_all({per_page: 10})` to return ten results per page. You may pass in any other params which this endpoint accepts. *NOTE: Strings must be double-quoted*
 6. `> S.ReverbAPI.get_categories_flat` -- hits the `/categories/flat` endpoint.
 7. `> S.ReverbAPIHelper.get_categories_with_string("bassoon")` filters the results of the above endpoint by the given string. 
