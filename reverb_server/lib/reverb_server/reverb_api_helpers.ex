@@ -18,8 +18,8 @@ defmodule ReverbServer.ReverbAPIHelpers do
       {:error, msg} ->
         {:error, msg}
       {:ok, %{"categories" => categories}} ->
-        Enum.filter(categories, fn(c) ->
-          String.contains?(String.downcase(c["full_name"]), String.downcase(token)) end)
+        {:ok, Enum.filter(categories, fn(c) ->
+          String.contains?(String.downcase(c["full_name"]), String.downcase(token)) end)}
     end
   end
 

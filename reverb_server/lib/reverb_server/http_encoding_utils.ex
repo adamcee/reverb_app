@@ -31,7 +31,8 @@ defmodule ReverbServer.HTTPEncodingUtils do
   example: "application/json"
   param: response_body
   the undecoded http response body string
-  return: decoded http response body string (a Map)
+  return: tuple withdecoded http response body string (a Map)
+  ex: `{:ok, %{listings: %{}}`
   """
   def decode_response_json(accept, response_body) do
     case accept do

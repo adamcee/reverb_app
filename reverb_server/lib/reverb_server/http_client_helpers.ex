@@ -35,7 +35,7 @@ defmodule ReverbServer.HTTPClientHelpers do
       {:error, :failure} ->
         Logger.error("Tried call to #{url}, failed.")
         {:error, :failure}
-      {:ok, {opts, josn}} -> EU.decode_response_json(opts, josn)
+      {:ok, {opts, json}} -> EU.decode_response_json(opts, json)
     end
   end
 
