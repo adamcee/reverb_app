@@ -47,76 +47,77 @@ defmodule ReverbServer.ListingTypes do
       year: String.t
     }
 
-
-    def from_str_map = (%{} = map_json) do
+    def from_str_map(%{} = map_json) do
       parsed = U.str_keys_to_atoms(map_json)
-      |> Map.to_list
-      |> Enum.map((fn ({key, val}) ->
-        # if field is some struct convert its value to said struct.
-        # if field is list of some struct convert list els to said struct.
-        # otherwise return the unchanged {key, val} tuple.
-            case get_type_if_is_struct_field(key) do
-              {same_key, struct_type} ->
-                case is_list_field(key) do
-                  false -> {key, struct(struct_type, val)}
-                  true -> {:key, list_items_to_structs(val, struct_type)}
-                end
-              _ -> {key, val}
-            end
-          end).())
+      parsed = T.build_struct_update_map_with_self(parsed, :_links, T.ListingLinks)
 
-      struct(Listing, parsed)
+      categories = Enum.map(parsed[:categories], &T.ListingCategory.from_str_map/1)
+      parsed = Map.put(parsed, :categories, categories)
+
+      parsed = T.build_struct_update_map_with_self(parsed, :condition, T.Condition)
+
+      photo_links_containers = Enum.map(parsed[:photos], &T.PhotoLinksContainer.from_str_map/1)
+      parsed = Map.put(parsed, :photos, photo_links_containers)
+
+      parsed = T.build_struct_update_map_with_self(parsed, :price, T.Price)
+      parsed = T.build_struct_update_map_with_self(parsed, :shipping, ST.Shipping)
+      parsed = T.build_struct_update_map_with_self(parsed, :shop, T.Shop)
+      parsed = T.build_struct_update_map_with_self(parsed, :state, T.State)
+
+      struct(T.Listing, parsed)
     end
+
+    # Something very clever that has bugs
+    # def from_str_map(%{} = map_json) do
+    #   # parsed = U.str_keys_to_atoms(map_json)
+    #   map_json
+    #   parsed = Map.to_list(map_json)
+    #   |> Enum.map(fn({key, val}) -> {String.to_atom(key), val} end)
+    #   |> Enum.map(fn ({key, val}) ->
+    #       # if field is some struct convert its value to said struct.
+    #       # if field is list of some struct convert list els to said struct.
+    #       # otherwise return the unchanged {key, val} tuple.
+    #       case get_type_if_is_struct_field(key) do
+    #         {same_key, struct_type} ->
+    #           case is_list_field(key) do
+    #             false -> {key, struct(struct_type, val)}
+    #             true -> {:key, list_items_to_structs(val, struct_type)}
+    #           end
+    #         _ -> {key, val}
+    #       end
+    #   end)
+    #   |> Enum.into(%{})
+
+    #   # struct(Listing, parsed)
+    # end
 
       ## HELPER FUNCTIONS FOR Listing.from_str_map ##
     # check if field/key of our struct contains a struct
     # return {:my_key, my_struct_type} | nil
-    defp get_type_if_is_struct_field(a_key) do
-      # We can assume @struct_fields is unique.
-      Enum.filter(@struct_fields, fn({b_key, type}) -> a_key == b_key end)
-    end
+      defp get_type_if_is_struct_field(a_key) do
+        # We can assume @struct_fields is unique.
+        Enum.filter(@struct_fields, fn({b_key, type}) -> a_key == b_key end)
+       |> Enum.at(0)
+      end
 
     # check if field/key of our struct is a list
     # return boolean
-    defp is_list_field(a_key) do
-      # We can assume @list_fields is unique.
-      Enum.filter(@list_fields, fn b_key -> a_key == b_key end)
-    end
+     defp is_list_field(a_key) do
+       # We can assume @list_fields is unique list.
+       list_field = Enum.filter(@list_fields, fn b_key -> a_key == b_key end)
+        case Enum.count(list_field) do
+          1 -> true
+          0 -> false
+        end
+     end
 
     # convert all the items in a list to a given struct.
     # can assume each item in the list is the right kind of map.
-    defp list_items_to_structs(list, struct_type) do
-      Enum.map(list, fn (%{} = i) -> struct(struct_type, i) end)
-    end
-
+     defp list_items_to_structs(list, struct_type) do
+       Enum.map(list, fn (%{} = i) -> struct(struct_type, i) end)
+     end
   end
 
-  # parsed = T.build_struct_update_map(parsed, :_links, T.ListingLinks)
-  # parsed = T.build_struct_update_map(parsed, :categories, T.ListingCategory)
-
-  # categories = struct(T.ListingCategory, parsed[:categories])
-
-  # condition: T.Condition,
-  # created_at: String.t,
-  # description: String.t,
-  # finish: String.t,
-  # has_inventory: boolean,
-  # id: integer,
-  # inventory: integer,
-  # listing_currency: String.t,
-  # make: String.t,
-  # mode: String.t,
-  # offers_enabled: boolean,
-  # photos: list(T.PhotoLinks),
-  # price: T.Price,
-  # published_at: String.t,
-  # shipping: ST.Shipping,
-  # shop: T.Shop,
-  # shop_id: integer,
-  # shop_name: String.t,
-  # state:  T.State,
-  # title: String.t,
-  # year: String.t
 
 
   defmodule PhotoLinksContainer do
@@ -264,18 +265,11 @@ defmodule ReverbServer.ListingTypes do
   end
 
   @doc """
-  # TODO: Eventually build a fancy version of this like so:
-  # 1. Convert the type map of the struct into a KeyList
-  # 2. For each key in our map we are converting, check
-  # if the value of its type is the same as the typemap (this will be true for primitives such as strings, etc.
-  # 3. If it is different, check if the type is a list of some type. If its a list, figure out how to get the list type, and perform the same check. If its a struct, Enum.map and convert each val in List to desired struct. If not struct, build the list.
-  # 4. If it is different and its not a list of structs, we can assume it is a struct. Convert the value to the desired struct and return it.
-
   Accept an atom-keyed map. For a given key,
   convert the value of that key to a given struct.
   Return the updated map.
   """
-  def build_struct_update_map(%{} = atom_key_map, key, struct_type) when is_atom(key) do
+  def build_struct_update_map_with_self(%{} = atom_key_map, key, struct_type) when is_atom(key) do
     val = atom_key_map[key]
     val_as_struct = struct(struct_type, val)
     Map.put(atom_key_map, key, val_as_struct)
