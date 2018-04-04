@@ -30,6 +30,18 @@ defmodule ReverbServer.Utils do
     end
   end
 
+  @doc """
+  str_map %{} map with all string keys
+  Returns the map, values unchanged, with all keys as atoms
+  """
+  def str_keys_to_atoms(str_map = %{}) do
+    str_map
+    |> Map.to_list
+    |> Enum.map(fn {k, v} ->  {String.to_atom(k), v} end)
+    |> Enum.into(%{})
+  end
+
+
   #  # from: https://stackoverflow.com/posts/30700541/revisions
   #  defmodule ValidateUri do
   #    def validate_uri(str) do

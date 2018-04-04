@@ -1,10 +1,9 @@
-defmodule ReverbServer.TypesTest do
+defmodule ReverbServer.ListingTypesTest do
   @moduledoc false
 
   require Logger
-  alias ReverbServer.Types, as: T
+  alias ReverbServer.ListingTypes, as: T
   alias ReverbServer.Utils, as: U
-  alias ReverbServer.TypesTest, as: S
   ExUnit.start()
 
   defmodule ListingLinksTest do
