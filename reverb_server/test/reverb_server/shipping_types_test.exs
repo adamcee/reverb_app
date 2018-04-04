@@ -30,6 +30,15 @@ defmodule ReverbServer.ShippingTypesTest do
       end
     end
 
+    test "assert RateContainer struct builds" do
+      {_listings, _listing, shipping, initial_offer_rate, rate, rate_fields} = U.get_listings_all_mock_data()
+      %{"rates" => rates_list} = shipping
+      [rate_container | _tail] = rates_list
+      case ST.RateContainer.from_str_map(rate_container) do
+        _correct = %ST.RateContainer{} -> assert true
+      end
+    end
+
     test "assert Shipping struct builds" do
       {_listings, _listing, shipping, initial_offer_rate, rate, rate_fields} = U.get_listings_all_mock_data()
       case ST.Shipping.from_str_map(shipping) do
