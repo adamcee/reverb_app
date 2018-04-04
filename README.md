@@ -2,8 +2,7 @@
 
 ## Installation
 1. Install [Elixir](https://elixir-lang.org/) - instructions in the link - if you do not have it. There is an `install_elixir.sh` script for Linux, if you wish.
-2. Install [node.js](https://nodejs.org/en/) if you do not have it.
-3. Install  and set up [Postgresql](https://www.postgresql.org/) - instructions in the link - if you do not have it. A great simple option for OS X is (http://postgresapp.com/). There is an `install_postgres_ubuntu.sh` install script for *Ubuntu Linux only* if you wish. There is also an `setup_postgres.sh` script, which should work for all Linux distros and for OS X, if you wish.
+2. Install  and set up [Postgresql](https://www.postgresql.org/) - instructions in the link - if you do not have it. A great simple option for OS X is (http://postgresapp.com/). There is an `install_postgres_ubuntu.sh` install script for *Ubuntu Linux only* if you wish. There is also an `setup_postgres.sh` script, which should work for all Linux distros and for OS X, if you wish.
 3. `$ cd reverb_server && mix deps.get`. Be sure your Postgres service is running (with Postgresapp you should click on the app icon to start it). 
 
 ## To run the server
