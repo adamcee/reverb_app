@@ -15,6 +15,19 @@
 1. `$ cd reverb-server`
 2. `$ mix test`
 3. To run an individual test suite, `$ mix test test/reverb_server/the_name_of_my_test_here.exs` (Note the `.exs` extension), or `$mix test test/reverb_server_web/the_name_of_my_test_here.exs`
+
+## To interact with the client API
+The application exposes an API which is basically a "pass-through layer" - it mimics the structure of the Reverb.com API routes, 
+but calls ReverbServer.ReverbAPI and ReverbServer.ReverbAPIHelpers.
+
+Once the application is running ....
+`$ curl "http://localhost:4000/listings/all"` will return the first page of results (all listings), with 10 listings per page.
+`$ curl "http://localhost:4000/listings/all?page=4"` will return the fourth page of resuts, with 10 listings per page.
+`$ curl "http://localhost:4000/listings/all?page=6&per_page=25"` will return the fourth page of resuts, with 25 listings per page.
+`$ curl "http://localhost:4000/listings/all?category=bassoon"` will return all listings whose category contains the word "bassoon".
+`$ curl "http://localhost:4000/categories/flat` will return the complete list of available categories.
+`$ curl "http://localhost:4000/categories/flat?q=bassoon` will return all categories which contain the string token "basoon" in their full name.
+
 ## To experiment with the app
 1. `$ cd reverb_server`
 2. `$ iex -S mix phx.server`. This will open up an REPL which allows you to interact with the running application. **Perform all of the following commands in this REPL**. These commands are function calls on modules in the application.
