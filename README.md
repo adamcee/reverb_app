@@ -35,7 +35,7 @@ Once the application is running ....
 5. `> S.ReverbAPI.get_listings_all(%{per_page: 10})` to return ten results per page. You may pass in any other params which this endpoint accepts. **NOTE: Strings must be double-quoted**
 6. `> S.ReverbAPI.get_categories_flat` -- hits the `/categories/flat` endpoint.
 7. `> S.ReverbAPIHelpers.get_categories_with_string("bassoon")` filters the results of the above endpoint by the given string. 
-8. **Any** module function (except for private functions, defined with `defp` (including third-party modules such as the [Poison JSON Encoder](https://github.com/devinus/poison) will work in here!
+8. **Any** module function (except for private functions, defined with `defp`), including third-party modules such as the [Poison JSON Encoder](https://github.com/devinus/poison), will work in here!
 
 Some areas of interest (all of which can be explored in the REPL) are: 
 
