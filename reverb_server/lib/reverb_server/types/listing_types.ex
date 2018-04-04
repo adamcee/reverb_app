@@ -16,7 +16,7 @@ defmodule ReverbServer.ListingTypes do
     defstruct @enforce_keys
 
     @struct_fields [{:_links, T.ListingLinks}, {:categories, T.ListingCategory}, {:condition, T.Condition},
-      {:photos, T.PhotoLinks}, {:price, T.Price}, {:shop, T.Shop}, {:state, T.State}]
+      {:photos, T.PhotoLinksContainer}, {:price, T.Price}, {:shop, T.Shop}, {:state, T.State}]
 
     @list_fields [:photos, :categories]
 
@@ -35,7 +35,7 @@ defmodule ReverbServer.ListingTypes do
       make: String.t,
       mode: String.t,
       offers_enabled: boolean,
-      photos: list(T.PhotoLinks),
+      photos: list(T.PhotoLinksContainer),
       price: T.Price,
       published_at: String.t,
       shipping: ST.Shipping,
@@ -117,6 +117,21 @@ defmodule ReverbServer.ListingTypes do
 
   end
 
+  defmodule PhotoLinksContainer do
+    @enforce_keys [:_links]
+    defstruct @enforce_keys
+    @type t :: %PhotoLinksContainer{
+                 _links: T.PhotLinks
+
+               }
+
+    def from_str_map(map_json) do
+      parsed = U.str_keys_to_atoms(map_json)
+      struct(PhotoLinksContainer, %{
+        _links: T.PhotoLinks.from_str_map(parsed[:_links]),
+      })
+    end
+  end
 
   defmodule PhotoLinks do
     @enforce_keys [:full, :thumbnail, :large_crop, :small_crop]
