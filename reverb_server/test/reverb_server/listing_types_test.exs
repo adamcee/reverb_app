@@ -83,6 +83,14 @@ defmodule ReverbServer.ListingTypesTest do
       end
     end
 
+    # TODO: Finish the type
+    # test "assert ListingsAll struct builds from json" do
+    #   {listings, _listing, _shipping, _initial_offer_rate, _rate, _rate_fields} = U.get_listings_all_mock_data()
+    #   case T.ListingsAll.from_str_map(listings) do
+    #     _correct = %T.ListingsAll{} -> assert true
+    #   end
+    # end
+
   end
 
 end
