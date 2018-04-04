@@ -21,12 +21,12 @@ The application exposes an API which is basically a "pass-through layer" - it mi
 but calls ReverbServer.ReverbAPI and ReverbServer.ReverbAPIHelpers.
 
 Once the application is running ....
-`$ curl "http://localhost:4000/listings/all"` will return the first page of results (all listings), with 10 listings per page.
-`$ curl "http://localhost:4000/listings/all?page=4"` will return the fourth page of resuts, with 10 listings per page.
-`$ curl "http://localhost:4000/listings/all?page=6&per_page=25"` will return the fourth page of resuts, with 25 listings per page.
-`$ curl "http://localhost:4000/listings/all?category=bassoon"` will return all listings whose category contains the word "bassoon".
-`$ curl "http://localhost:4000/categories/flat` will return the complete list of available categories.
-`$ curl "http://localhost:4000/categories/flat?q=bassoon` will return all categories which contain the string token "basoon" in their full name.
+`$ curl "http://localhost:4000/api/listings/all"` will return the first page of results (all listings), with 10 listings per page.
+`$ curl "http://localhost:4000/api/listings/all?page=4"` will return the fourth page of resuts, with 10 listings per page.
+`$ curl "http://localhost:4000/api/listings/all?page=6&per_page=25"` will return the fourth page of resuts, with 25 listings per page.
+`$ curl "http://localhost:4000/api/listings/all?category=bassoon"` will return all listings whose category contains the word "bassoon".
+`$ curl "http://localhost:4000/api/categories/flat` will return the complete list of available categories.
+`$ curl "http://localhost:4000/api/categories/flat?q=bassoon` will return all categories which contain the string token "basoon" in their full name.
 
 ## To experiment with the app
 1. `$ cd reverb_server`
