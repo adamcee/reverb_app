@@ -45,21 +45,21 @@ defmodule ReverbServer.ShippingTypes do
     @enforce_keys [:rate, :region_code]
     defstruct @enforce_keys
     @type t :: %InitialOfferRate{
-      rate: T.IORate,
+      rate: T.IORateContainer,
       region_code: String.t
     }
 
     def from_str_map(map_json) do
       parsed = U.str_keys_to_atoms(map_json)
-      parsed = Map.put(parsed, :rate, T.IORate.from_str_map(parsed[:rate]))
+      parsed = Map.put(parsed, :rate, T.IORateContainer.from_str_map(parsed[:rate]))
       struct(InitialOfferRate, parsed)
     end
   end
 
-  defmodule IORate do
+  defmodule IORateContainer do
     @enforce_keys [:display, :original]
     defstruct @enforce_keys
-    @type t :: %IORate{
+    @type t :: %IORateContainer{
       display: T.RateFields,
       original: T.RateFields
     }
@@ -68,7 +68,7 @@ defmodule ReverbServer.ShippingTypes do
       parsed = U.str_keys_to_atoms(map_json)
       parsed = Map.put(parsed, :display, T.RateFields.from_str_map(parsed[:display]))
       parsed = Map.put(parsed, :original, T.RateFields.from_str_map(parsed[:original]))
-      struct(InitialOfferRate, parsed)
+      struct(IORateContainer, parsed)
     end
   end
 
