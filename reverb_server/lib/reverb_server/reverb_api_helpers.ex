@@ -5,6 +5,7 @@ defmodule ReverbServer.ReverbAPIHelpers do
   """
 
   alias ReverbServer.ReverbAPI, as: API
+  alias ReverbServer.CategoryTypes, as: CT
   require Logger
 
   @doc """
@@ -17,9 +18,9 @@ defmodule ReverbServer.ReverbAPIHelpers do
     case API.get_categories_flat() do
       {:error, msg} ->
         {:error, msg}
-      {:ok, %{"categories" => categories}} ->
-        {:ok, Enum.filter(categories, fn(c) ->
-          String.contains?(String.downcase(c["full_name"]), String.downcase(token)) end)}
+      {:ok, %CT.CategoriesFlat{} = cat_flat} ->
+        {:ok, Enum.filter(cat_flat.categories, fn(c) ->
+          String.contains?(String.downcase(c.full_name), String.downcase(token)) end)}
     end
   end
 

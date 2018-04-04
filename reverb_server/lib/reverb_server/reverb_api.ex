@@ -6,6 +6,7 @@ defmodule ReverbServer.ReverbAPI do
   """
 
   alias ReverbServer.HTTPClientHelpers, as: HTTP
+  alias ReverbServer.CategoryTypes, as: CT
   require Logger
 
 
@@ -16,7 +17,10 @@ defmodule ReverbServer.ReverbAPI do
   end
 
   def get_categories_flat do
-    reverb_get_json("/categories/flat")
+    case reverb_get_json("/categories/flat") do
+      {:ok, json} -> {:ok, CT.CategoriesFlat.from_str_map(json)}
+      {:error, reason} -> {:error, reason}
+    end
   end
 
   defp reverb_get_json(endpoint, opts \\ []) do
